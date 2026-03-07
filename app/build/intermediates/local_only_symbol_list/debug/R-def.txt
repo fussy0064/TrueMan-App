@@ -9,6 +9,7 @@ color teal_700
 color white
 id btnBlockDomain
 id btnEnableAccessibility
+id btnEnableDeviceAdmin
 id btnLessons
 id btnMarkComplete
 id btnParental
@@ -35,3 +36,4 @@ string accessibility_service_description
 string app_name
 style Theme.TrueMan
 xml accessibility_service_config
+xml device_admin_policies

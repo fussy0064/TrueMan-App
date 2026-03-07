@@ -45,6 +45,21 @@
         android:id="@+id/btnEnableAccessibility"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Enable Global Blocking" />
+        android:text="Enable Global Blocking" 
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="System Lockdown (Device Owner)"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnEnableDeviceAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#D32F2F"
+        android:text="Lock Device / Prevent Uninstall" />
 
 </LinearLayout>

@@ -40,6 +40,10 @@
         "source": "com.fussy.trueman.app-main-36:/layout/activity_splash.xml"
     },
     {
+        "merged": "com.fussy.trueman.app-merged_res-34:/xml_device_admin_policies.xml.flat",
+        "source": "com.fussy.trueman.app-main-36:/xml/device_admin_policies.xml"
+    },
+    {
         "merged": "com.fussy.trueman.app-merged_res-34:/layout_activity_main.xml.flat",
         "source": "com.fussy.trueman.app-main-36:/layout/activity_main.xml"
     },

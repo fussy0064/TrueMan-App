@@ -396,6 +396,34 @@
     <incident
         id="HardcodedText"
         severity="warning"
+        message="Hardcoded string &quot;System Lockdown (Device Owner)&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
+            line="54"
+            column="9"
+            startOffset="1761"
+            endLine="54"
+            endColumn="54"
+            endOffset="1806"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Lock Device / Prevent Uninstall&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
+            line="63"
+            column="9"
+            startOffset="2074"
+            endLine="63"
+            endColumn="55"
+            endOffset="2120"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
         message="Hardcoded string &quot;My Progress&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_progress.xml"

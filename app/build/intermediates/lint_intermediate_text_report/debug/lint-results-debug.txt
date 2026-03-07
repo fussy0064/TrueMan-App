@@ -320,8 +320,14 @@ public class SplashActivity extends AppCompatActivity {
         android:text="Global Safe Browsing"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_parental_control.xml:48: Warning: Hardcoded string "Enable Global Blocking", should use @string resource [HardcodedText]
-        android:text="Enable Global Blocking" />
+        android:text="Enable Global Blocking" 
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_parental_control.xml:54: Warning: Hardcoded string "System Lockdown (Device Owner)", should use @string resource [HardcodedText]
+        android:text="System Lockdown (Device Owner)"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_parental_control.xml:63: Warning: Hardcoded string "Lock Device / Prevent Uninstall", should use @string resource [HardcodedText]
+        android:text="Lock Device / Prevent Uninstall" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_progress.xml:11: Warning: Hardcoded string "My Progress", should use @string resource [HardcodedText]
         android:text="My Progress"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -352,4 +358,4 @@ public class SplashActivity extends AppCompatActivity {
    There are quickfixes to automatically extract this hardcoded string into a
    resource lookup.
 
-0 errors, 67 warnings
+0 errors, 69 warnings

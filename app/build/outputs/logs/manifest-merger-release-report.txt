@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:2:1-46:12
+ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:2:1-58:12
 MERGED from [com.google.android.material:material:1.11.0] /home/fussy/.gradle/caches/transforms-3/3630f8cda1d9c7653134793a30870547/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/fussy/.gradle/caches/transforms-3/666e90f6d63a92a3eb6367791e3c8254/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/fussy/.gradle/caches/transforms-3/1d5d1eda87e3d08c1b8e9f67ca7dfd67/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
@@ -62,8 +62,8 @@ ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifes
 	android:name
 		ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:7:5-44:19
-INJECTED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:7:5-44:19
+ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:7:5-56:19
+INJECTED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:7:5-56:19
 MERGED from [com.google.android.material:material:1.11.0] /home/fussy/.gradle/caches/transforms-3/3630f8cda1d9c7653134793a30870547/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /home/fussy/.gradle/caches/transforms-3/3630f8cda1d9c7653134793a30870547/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/fussy/.gradle/caches/transforms-3/666e90f6d63a92a3eb6367791e3c8254/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -156,6 +156,26 @@ ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifes
 		ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:41:17-69
 	android:name
 		ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:40:17-60
+receiver#com.fussy.trueman.TrueManDeviceAdminReceiver
+ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:44:9-54:20
+	android:exported
+		ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:47:13-36
+	android:permission
+		ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:46:13-70
+	android:name
+		ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:45:13-55
+meta-data#android.app.device_admin
+ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:48:13-50:65
+	android:resource
+		ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:50:17-62
+	android:name
+		ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:49:17-56
+intent-filter#action:name:android.app.action.DEVICE_ADMIN_ENABLED
+ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:51:13-53:29
+action#android.app.action.DEVICE_ADMIN_ENABLED
+ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:52:17-82
+	android:name
+		ADDED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:52:25-79
 uses-sdk
 INJECTED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml
