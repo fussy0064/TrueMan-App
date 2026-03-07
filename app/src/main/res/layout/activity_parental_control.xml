@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Parental Controls"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Domain to Block List"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/etDomainBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="e.g. badsite.com"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnBlockDomain"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Block Domain"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Global Safe Browsing"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnEnableAccessibility"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Enable Global Blocking" />
+
+</LinearLayout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TrueMan</string>
+    <string name="accessibility_service_description">TrueMan requires Accessibility to monitor browsers globally for Safe Browsing. It reads URLs to block restricted content.</string>
+</resources>
