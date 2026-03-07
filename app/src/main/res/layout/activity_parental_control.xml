@@ -60,6 +60,14 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:backgroundTint="#D32F2F"
-        android:text="Lock Device / Prevent Uninstall" />
+        android:text="Lock Device / Prevent Uninstall" 
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnEnableVpn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#1976D2"
+        android:text="Enable Safe VPN (Force Safe DNS)" />
 
 </LinearLayout>

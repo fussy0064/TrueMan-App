@@ -52,5 +52,26 @@ public class ParentalControlActivity extends AppCompatActivity {
                     "Enabling TrueMan as Device Administrator will prevent users from uninstalling the application or modifying VPN settings to bypass the safety filters.");
             startActivity(intent);
         });
+
+        Button btnEnableVpn = findViewById(R.id.btnEnableVpn);
+        btnEnableVpn.setOnClickListener(v -> {
+            android.content.Intent vpnIntent = android.net.VpnService.prepare(this);
+            if (vpnIntent != null) {
+                startActivityForResult(vpnIntent, 0);
+            } else {
+                onActivityResult(0, RESULT_OK, null);
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, android.content.Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 0 && resultCode == RESULT_OK) {
+            startService(new android.content.Intent(this, TrueManVpnService.class));
+            Toast.makeText(this, "Safe DNS VPN Activated. Other VPNs are now blocked.", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "Failed to start VPN", Toast.LENGTH_SHORT).show();
+        }
     }
 }

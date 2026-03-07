@@ -10,6 +10,7 @@ color white
 id btnBlockDomain
 id btnEnableAccessibility
 id btnEnableDeviceAdmin
+id btnEnableVpn
 id btnLessons
 id btnMarkComplete
 id btnParental

@@ -177,9 +177,9 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 69 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 70 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sat Mar 07 18:57:50 EAT 2026 by AGP (8.2.0)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sat Mar 07 19:09:00 EAT 2026 by AGP (8.2.0)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -198,7 +198,7 @@ document.getElementById(id).style.display = 'none';
       <a class="mdl-navigation__link" href="#TextFields"><i class="material-icons warning-icon">warning</i>Missing <code>inputType</code> (2)</a>
       <a class="mdl-navigation__link" href="#Autofill"><i class="material-icons warning-icon">warning</i>Use Autofill (3)</a>
       <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (8)</a>
-      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (26)</a>
+      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (27)</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
@@ -258,7 +258,7 @@ document.getElementById(id).style.display = 'none';
 <td class="countColumn">8</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#SetTextI18n">SetTextI18n</a>: TextView Internationalization</td></tr>
 <tr>
-<td class="countColumn">26</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">27</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#HardcodedText">HardcodedText</a>: Hardcoded text</td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#ExtraIssues">Included Additional Checks (20)</a>
 </td></tr>
@@ -1138,7 +1138,7 @@ Dismiss</button>            </div>
 <span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"16dp"</span> />
 </pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 21 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 22 More Occurrences...</button>
 <div id="HardcodedTextDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/layout/activity_lesson.xml">../../src/main/res/layout/activity_lesson.xml</a>:29</span>: <span class="message">Hardcoded string "Set your daily goal based on this lesson:", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno"> 26 </span>    <span class="tag">&lt;TextView</span><span class="attribute">
@@ -1281,9 +1281,18 @@ Dismiss</button>            </div>
 <span class="lineno"> 60 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
 <span class="lineno"> 61 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"60dp"</span>
 <span class="lineno"> 62 </span>        <span class="prefix">android:</span><span class="attribute">backgroundTint</span>=<span class="value">"#D32F2F"</span>
-<span class="caretline"><span class="lineno"> 63 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Lock Device / Prevent Uninstall"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 64 </span>
-<span class="lineno"> 65 </span><span class="tag">&lt;/LinearLayout></span>
+<span class="caretline"><span class="lineno"> 63 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Lock Device / Prevent Uninstall"</span></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 64 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"16dp"</span> />
+<span class="lineno"> 65 </span>
+<span class="lineno"> 66 </span>    <span class="tag">&lt;Button</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_parental_control.xml">../../src/main/res/layout/activity_parental_control.xml</a>:71</span>: <span class="message">Hardcoded string "Enable Safe VPN (Force Safe DNS)", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 68 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 69 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"60dp"</span>
+<span class="lineno"> 70 </span>        <span class="prefix">android:</span><span class="attribute">backgroundTint</span>=<span class="value">"#1976D2"</span>
+<span class="caretline"><span class="lineno"> 71 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Enable Safe VPN (Force Safe DNS)"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 72 </span>
+<span class="lineno"> 73 </span><span class="tag">&lt;/LinearLayout></span>
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_progress.xml">../../src/main/res/layout/activity_progress.xml</a>:11</span>: <span class="message">Hardcoded string "My Progress", should use <code>@string</code> resource</span><br /><pre class="errorlines">

@@ -86,6 +86,27 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_lesson.xml"
+            line="33"
+            column="6"
+            startOffset="1086"
+            endLine="33"
+            endColumn="14"
+            endOffset="1094"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -103,27 +124,6 @@
                 attribute="importantForAutofill"
                 value="no"/>
         </fix-alternatives>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_lesson.xml"
-            line="33"
-            column="6"
-            startOffset="1086"
-            endLine="33"
-            endColumn="14"
-            endOffset="1094"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            dot="4"
-            mark="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_lesson.xml"
             line="33"
@@ -289,6 +289,27 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
+            line="23"
+            column="6"
+            startOffset="747"
+            endLine="23"
+            endColumn="14"
+            endOffset="755"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -306,27 +327,6 @@
                 attribute="importantForAutofill"
                 value="no"/>
         </fix-alternatives>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
-            line="23"
-            column="6"
-            startOffset="747"
-            endLine="23"
-            endColumn="14"
-            endOffset="755"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            dot="4"
-            mark="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
             line="23"
@@ -419,6 +419,20 @@
             endLine="63"
             endColumn="55"
             endOffset="2120"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Enable Safe VPN (Force Safe DNS)&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
+            line="71"
+            column="9"
+            startOffset="2350"
+            endLine="71"
+            endColumn="56"
+            endOffset="2397"/>
     </incident>
 
     <incident

@@ -326,8 +326,11 @@ public class SplashActivity extends AppCompatActivity {
         android:text="System Lockdown (Device Owner)"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_parental_control.xml:63: Warning: Hardcoded string "Lock Device / Prevent Uninstall", should use @string resource [HardcodedText]
-        android:text="Lock Device / Prevent Uninstall" />
+        android:text="Lock Device / Prevent Uninstall" 
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_parental_control.xml:71: Warning: Hardcoded string "Enable Safe VPN (Force Safe DNS)", should use @string resource [HardcodedText]
+        android:text="Enable Safe VPN (Force Safe DNS)" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_progress.xml:11: Warning: Hardcoded string "My Progress", should use @string resource [HardcodedText]
         android:text="My Progress"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -358,4 +361,4 @@ public class SplashActivity extends AppCompatActivity {
    There are quickfixes to automatically extract this hardcoded string into a
    resource lookup.
 
-0 errors, 69 warnings
+0 errors, 70 warnings
