@@ -72,6 +72,11 @@ public class BrowserAccessibilityService extends AccessibilityService {
             return;
         }
 
+        // YouTube Ad Skipping Logic
+        if (packageName.equals("com.google.android.youtube")) {
+            findAndSkipYouTubeAds(rootNode);
+        }
+
         // Try to find the URL bar
         String urlBarId = "";
 
@@ -116,6 +121,57 @@ public class BrowserAccessibilityService extends AccessibilityService {
                 }
             }
         }
+    }
+
+    private void findAndSkipYouTubeAds(AccessibilityNodeInfo node) {
+        if (node == null)
+            return;
+
+        // Common IDs for YouTube skip buttons
+        String[] skipButtonIds = {
+                "com.google.android.youtube:id/skip_ad_button",
+                "com.google.android.youtube:id/modern_skip_ad_button",
+                "com.google.android.youtube:id/skip_ad_button_container"
+        };
+
+        for (String id : skipButtonIds) {
+            List<AccessibilityNodeInfo> targets = node.findAccessibilityNodeInfosByViewId(id);
+            if (targets != null && !targets.isEmpty()) {
+                for (AccessibilityNodeInfo target : targets) {
+                    if (target.isClickable() && target.isEnabled()) {
+                        target.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+                        Log.d("TrueMan", "YouTube Ad Skipped automatically!");
+                        return;
+                    }
+                }
+            }
+        }
+
+        // Fallback: search for "Skip Ad" text
+        List<AccessibilityNodeInfo> textTargets = node.findAccessibilityNodeInfosByText("Skip Ad");
+        if (textTargets != null && !textTargets.isEmpty()) {
+            for (AccessibilityNodeInfo target : textTargets) {
+                AccessibilityNodeInfo clickableParent = findClickableParent(target);
+                if (clickableParent != null) {
+                    clickableParent.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+                    Log.d("TrueMan", "YouTube Ad Skipped via text match!");
+                    return;
+                }
+            }
+        }
+
+        // Recursively search children if not found
+        for (int i = 0; i < node.getChildCount(); i++) {
+            findAndSkipYouTubeAds(node.getChild(i));
+        }
+    }
+
+    private AccessibilityNodeInfo findClickableParent(AccessibilityNodeInfo node) {
+        if (node == null)
+            return null;
+        if (node.isClickable())
+            return node;
+        return findClickableParent(node.getParent());
     }
 
     @Override

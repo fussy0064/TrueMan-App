@@ -4,10 +4,10 @@
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserAccessibilityService.java:45: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
             if (!word.isEmpty() && lowerPkg.contains(word.toLowerCase())) {
                                                           ~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserAccessibilityService.java:103: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserAccessibilityService.java:108: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
                     if (capturedUrl.toLowerCase().contains(word.toLowerCase())) {
                                     ~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserAccessibilityService.java:103: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserAccessibilityService.java:108: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
                     if (capturedUrl.toLowerCase().contains(word.toLowerCase())) {
                                                                 ~~~~~~~~~~~
 

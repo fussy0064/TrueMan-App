@@ -17,18 +17,20 @@ The application integrates a **safe browsing system capable of globally blocking
 ### 📚 Daily Learning Lessons
 The application provides short educational lessons to encourage continuous learning. It features topics like Time Management and Online Safety stored locally on the device using an SQLite database. You can track your reading progress, keeping a log of what you have finished to build healthy learning habits.
 
-### 🛡️ VPN-Independent Safe Browsing
-The application uses **Android Accessibility Services** to track the URL headers across all major browsers installed on the device (Chrome, Firefox, Edge, Opera, Samsung Internet).
-If an adult keyword or blacklisted site (like *porn*, or *xxx*) is detected, TrueMan immediately blocks access and shows an Access Denied restriction screen.
+### 🛡️ VPN Lockdown & Anti-Bypass
+The application implements a high-security lockdown system to prevent the user from bypassing digital safety:
+* **TrueMan Safe VPN:** Occupies the Android VPN slot to automatically disconnect and block other VPN apps from running.
+* **Aggressive App Interceptor:** Using Global Accessibility Services, TrueMan detects and blocks the opening of unauthorized VPN, Proxy, or Tunneling applications.
+* **Uninstall Trap:** If an unauthorized VPN app is detected, TrueMan forcefully triggers the system uninstaller prompt to remove the threat.
+* **Auto-Start on Boot:** TrueMan automatically engages its security layers and VPN service as soon as the device is restarted.
 
-### 👨‍👩‍👦 Parental Control System
-The parental control module allows administrators to efficiently manage browsing restrictions by manually specifying domains to block and dynamically enabling the Accessibility Service.
+### 🚫 Global Ad & Tracker Blocking
+TrueMan provides a cleaner and safer browsing experience by removing intrusive advertisements:
+* **YouTube Ad Skipper:** Automatically detects and skips non-skippable and skippable YouTube ads in the native YouTube application.
+* **Network-Level Ad Filtering:** Routes network traffic (via Safe DNS) through AdGuard DNS servers to block ads, malware, and trackers globally across all applications.
 
-### 🌐 Integrated API Learning Modules
-TrueMan seamlessly fetches real-time data from completely free logic APIs:
-* **IT Computer Studies:** Engages users with technical computing and software engineering multiple-choice trivia using the OpenTDB system.
-* **Daily Exercises:** Retrieves randomized english exercise tutorials (with descriptions of the form/technique) leveraging the open WGER fitness database.
-* **Nutrition Facts:** Breaks down complex macros like fat, sugars, and protein using the Fruityvice open endpoint.
+### 🏛️ Device Administrator Integration
+TrueMan can be activated as a **Device Administrator**, preventing the application from being uninstalled by the user for maximum security integrity.
 
 ---
 
