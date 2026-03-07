@@ -68,8 +68,13 @@ public class ParentalControlActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, android.content.Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 0 && resultCode == RESULT_OK) {
-            startService(new android.content.Intent(this, TrueManVpnService.class));
-            Toast.makeText(this, "Safe DNS VPN Activated. Other VPNs are now blocked.", Toast.LENGTH_LONG).show();
+            android.content.Intent serviceIntent = new android.content.Intent(this, TrueManVpnService.class);
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                startForegroundService(serviceIntent);
+            } else {
+                startService(serviceIntent);
+            }
+            Toast.makeText(this, "Safe Shield Activated. Ads and Unauthorized VPNs blocked.", Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(this, "Failed to start VPN", Toast.LENGTH_SHORT).show();
         }

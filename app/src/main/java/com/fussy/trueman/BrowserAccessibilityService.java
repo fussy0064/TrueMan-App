@@ -127,11 +127,14 @@ public class BrowserAccessibilityService extends AccessibilityService {
         if (node == null)
             return;
 
-        // Common IDs for YouTube skip buttons
+        // More aggressive list of YouTube skip button IDs
         String[] skipButtonIds = {
                 "com.google.android.youtube:id/skip_ad_button",
                 "com.google.android.youtube:id/modern_skip_ad_button",
-                "com.google.android.youtube:id/skip_ad_button_container"
+                "com.google.android.youtube:id/skip_ad_button_container",
+                "com.google.android.youtube:id/ad_skip_button",
+                "com.google.android.youtube:id/skip_ad_button_text",
+                "com.google.android.youtube:id/action_button"
         };
 
         for (String id : skipButtonIds) {
@@ -140,30 +143,31 @@ public class BrowserAccessibilityService extends AccessibilityService {
                 for (AccessibilityNodeInfo target : targets) {
                     if (target.isClickable() && target.isEnabled()) {
                         target.performAction(AccessibilityNodeInfo.ACTION_CLICK);
-                        Log.d("TrueMan", "YouTube Ad Skipped automatically!");
+                        Log.d("TrueMan", "YouTube Ad Skipped via ID: " + id);
                         return;
                     }
                 }
             }
         }
 
-        // Fallback: search for "Skip Ad" text
-        List<AccessibilityNodeInfo> textTargets = node.findAccessibilityNodeInfosByText("Skip Ad");
-        if (textTargets != null && !textTargets.isEmpty()) {
-            for (AccessibilityNodeInfo target : textTargets) {
-                AccessibilityNodeInfo clickableParent = findClickableParent(target);
-                if (clickableParent != null) {
-                    clickableParent.performAction(AccessibilityNodeInfo.ACTION_CLICK);
-                    Log.d("TrueMan", "YouTube Ad Skipped via text match!");
-                    return;
+        // Search for nodes with "Skip" text in various languages (English, etc.)
+        searchAndClickText(node, "Skip Ad");
+        searchAndClickText(node, "Skip");
+    }
+
+    private boolean searchAndClickText(AccessibilityNodeInfo node, String text) {
+        List<AccessibilityNodeInfo> targets = node.findAccessibilityNodeInfosByText(text);
+        if (targets != null && !targets.isEmpty()) {
+            for (AccessibilityNodeInfo target : targets) {
+                AccessibilityNodeInfo clickableNode = findClickableParent(target);
+                if (clickableNode != null && clickableNode.isEnabled()) {
+                    clickableNode.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+                    Log.d("TrueMan", "YouTube Ad Skipped via text: " + text);
+                    return true;
                 }
             }
         }
-
-        // Recursively search children if not found
-        for (int i = 0; i < node.getChildCount(); i++) {
-            findAndSkipYouTubeAds(node.getChild(i));
-        }
+        return false;
     }
 
     private AccessibilityNodeInfo findClickableParent(AccessibilityNodeInfo node) {

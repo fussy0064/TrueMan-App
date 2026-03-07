@@ -14,8 +14,13 @@ public class BootReceiver extends BroadcastReceiver {
             Intent vpnIntent = VpnService.prepare(context);
             if (vpnIntent == null) {
                 // Permission already granted, we can auto-start
-                context.startService(new Intent(context, TrueManVpnService.class));
-                Log.d("TrueMan", "Auto-starting TrueMan VPN on boot.");
+                Intent serviceIntent = new Intent(context, TrueManVpnService.class);
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                    context.startForegroundService(serviceIntent);
+                } else {
+                    context.startService(serviceIntent);
+                }
+                Log.d("TrueMan", "Auto-starting TrueMan VPN on boot (Foreground).");
             } else {
                 Log.d("TrueMan", "Missing VPN permission, cannot auto-start on boot.");
             }
