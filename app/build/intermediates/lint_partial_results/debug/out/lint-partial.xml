@@ -3,6 +3,9 @@
     <map id="UnsafeIntentLaunch">
             <map id="unprotected">
                 <entry
+                    name="com.fussy.trueman.BootReceiver"
+                    boolean="true"/>
+                <entry
                     name="com.fussy.trueman.SplashActivity"
                     boolean="true"/>
             </map>

@@ -177,16 +177,16 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 70 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 71 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sat Mar 07 19:09:00 EAT 2026 by AGP (8.2.0)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sat Mar 07 19:43:43 EAT 2026 by AGP (8.2.0)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Issue Types</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
-      <a class="mdl-navigation__link" href="#DefaultLocale"><i class="material-icons warning-icon">warning</i>Implied default locale in case conversion (2)</a>
+      <a class="mdl-navigation__link" href="#DefaultLocale"><i class="material-icons warning-icon">warning</i>Implied default locale in case conversion (3)</a>
       <a class="mdl-navigation__link" href="#OldTargetApi"><i class="material-icons warning-icon">warning</i>Target SDK attribute is not targeting latest version (1)</a>
       <a class="mdl-navigation__link" href="#CustomSplashScreen"><i class="material-icons warning-icon">warning</i>Application-defined Launch Screen (1)</a>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (7)</a>
@@ -214,7 +214,7 @@ document.getElementById(id).style.display = 'none';
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
 </td></tr>
 <tr>
-<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">3</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#DefaultLocale">DefaultLocale</a>: Implied default locale in case conversion</td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
@@ -281,23 +281,33 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/fussy/trueman/BrowserAccessibilityService.java">../../src/main/java/com/fussy/trueman/BrowserAccessibilityService.java</a>:61</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
-<span class="lineno"> 58 </span>                blockedSites = dbHelper.getAllBlockedDomains();
-<span class="lineno"> 59 </span>
-<span class="lineno"> 60 </span>                <span class="keyword">for</span> (String word : blockedSites) {
-<span class="caretline"><span class="lineno"> 61 </span>                    <span class="keyword">if</span> (capturedUrl.<span class="warning">toLowerCase</span>().contains(word.toLowerCase())) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 62 </span>                        Log.d(<span class="string">"TrueMan"</span>, <span class="string">"Blocked URL accessed: "</span> + capturedUrl);
-<span class="lineno"> 63 </span>
-<span class="lineno"> 64 </span>                        <span class="comment">// Action 1: Navigate Back (or home)</span></pre>
+<span class="location"><a href="../../src/main/java/com/fussy/trueman/BrowserAccessibilityService.java">../../src/main/java/com/fussy/trueman/BrowserAccessibilityService.java</a>:35</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno">  32 </span>        String packageName = event.getPackageName().toString();
+<span class="lineno">  33 </span>
+<span class="lineno">  34 </span>        <span class="comment">// BLOCK OTHER VPN APPS INSTANTLY</span>
+<span class="caretline"><span class="lineno">  35 </span>        String lowerPkg = packageName.<span class="warning">toLowerCase</span>();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  36 </span>        <span class="keyword">if</span> ((lowerPkg.contains(<span class="string">"vpn"</span>) || lowerPkg.contains(<span class="string">"proxy"</span>) ||
+<span class="lineno">  37 </span>                lowerPkg.contains(<span class="string">"tunnel"</span>) || lowerPkg.contains(<span class="string">"nord"</span>) ||
+<span class="lineno">  38 </span>                lowerPkg.contains(<span class="string">"express"</span>)) &amp;&amp; !packageName.equals(getPackageName())) {
+</pre>
 
-<span class="location"><a href="../../src/main/java/com/fussy/trueman/BrowserAccessibilityService.java">../../src/main/java/com/fussy/trueman/BrowserAccessibilityService.java</a>:61</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
-<span class="lineno"> 58 </span>                blockedSites = dbHelper.getAllBlockedDomains();
-<span class="lineno"> 59 </span>
-<span class="lineno"> 60 </span>                <span class="keyword">for</span> (String word : blockedSites) {
-<span class="caretline"><span class="lineno"> 61 </span>                    <span class="keyword">if</span> (capturedUrl.toLowerCase().contains(word.<span class="warning">toLowerCase</span>())) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 62 </span>                        Log.d(<span class="string">"TrueMan"</span>, <span class="string">"Blocked URL accessed: "</span> + capturedUrl);
-<span class="lineno"> 63 </span>
-<span class="lineno"> 64 </span>                        <span class="comment">// Action 1: Navigate Back (or home)</span></pre>
+<span class="location"><a href="../../src/main/java/com/fussy/trueman/BrowserAccessibilityService.java">../../src/main/java/com/fussy/trueman/BrowserAccessibilityService.java</a>:78</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno">  75 </span>                blockedSites = dbHelper.getAllBlockedDomains();
+<span class="lineno">  76 </span>
+<span class="lineno">  77 </span>                <span class="keyword">for</span> (String word : blockedSites) {
+<span class="caretline"><span class="lineno">  78 </span>                    <span class="keyword">if</span> (capturedUrl.<span class="warning">toLowerCase</span>().contains(word.toLowerCase())) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  79 </span>                        Log.d(<span class="string">"TrueMan"</span>, <span class="string">"Blocked URL accessed: "</span> + capturedUrl);
+<span class="lineno">  80 </span>
+<span class="lineno">  81 </span>                        <span class="comment">// Action 1: Navigate Back (or home)</span></pre>
+
+<span class="location"><a href="../../src/main/java/com/fussy/trueman/BrowserAccessibilityService.java">../../src/main/java/com/fussy/trueman/BrowserAccessibilityService.java</a>:78</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno">  75 </span>                blockedSites = dbHelper.getAllBlockedDomains();
+<span class="lineno">  76 </span>
+<span class="lineno">  77 </span>                <span class="keyword">for</span> (String word : blockedSites) {
+<span class="caretline"><span class="lineno">  78 </span>                    <span class="keyword">if</span> (capturedUrl.toLowerCase().contains(word.<span class="warning">toLowerCase</span>())) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  79 </span>                        Log.d(<span class="string">"TrueMan"</span>, <span class="string">"Blocked URL accessed: "</span> + capturedUrl);
+<span class="lineno">  80 </span>
+<span class="lineno">  81 </span>                        <span class="comment">// Action 1: Navigate Back (or home)</span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationDefaultLocale" style="display: none;">

@@ -11,207 +11,227 @@
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:5:5-67
 11-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:5:22-64
-12
-13    <permission
-13-->[androidx.core:core:1.9.0] /home/fussy/.gradle/caches/transforms-3/2c572bfdb425e6c1375d05070450f3cb/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
-14        android:name="com.fussy.trueman.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-14-->[androidx.core:core:1.9.0] /home/fussy/.gradle/caches/transforms-3/2c572bfdb425e6c1375d05070450f3cb/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
-15        android:protectionLevel="signature" />
-15-->[androidx.core:core:1.9.0] /home/fussy/.gradle/caches/transforms-3/2c572bfdb425e6c1375d05070450f3cb/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
-16
-17    <uses-permission android:name="com.fussy.trueman.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-17-->[androidx.core:core:1.9.0] /home/fussy/.gradle/caches/transforms-3/2c572bfdb425e6c1375d05070450f3cb/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-17-->[androidx.core:core:1.9.0] /home/fussy/.gradle/caches/transforms-3/2c572bfdb425e6c1375d05070450f3cb/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
-18
-19    <application
-19-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:7:5-65:19
-20        android:allowBackup="true"
-20-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:8:9-35
-21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.9.0] /home/fussy/.gradle/caches/transforms-3/2c572bfdb425e6c1375d05070450f3cb/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
-22        android:debuggable="true"
-23        android:extractNativeLibs="false"
-24        android:icon="@mipmap/ic_launcher"
-24-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:9:9-43
-25        android:label="@string/app_name"
-25-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:10:9-41
-26        android:roundIcon="@mipmap/ic_launcher_round"
-26-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:11:9-54
-27        android:supportsRtl="true"
-27-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:12:9-35
-28        android:theme="@style/Theme.TrueMan" >
-28-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:13:9-45
-29        <activity
-29-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:15:9-22:20
-30            android:name="com.fussy.trueman.SplashActivity"
-30-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:16:13-43
-31            android:exported="true" >
-31-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:17:13-36
-32            <intent-filter>
-32-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:18:13-21:29
-33                <action android:name="android.intent.action.MAIN" />
-33-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:19:17-69
-33-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:19:25-66
-34
-35                <category android:name="android.intent.category.LAUNCHER" />
-35-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:20:17-77
-35-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:20:27-74
-36            </intent-filter>
-37        </activity>
-38        <activity android:name="com.fussy.trueman.MainActivity" />
-38-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:24:9-50
-38-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:24:19-47
-39        <activity android:name="com.fussy.trueman.LessonActivity" />
-39-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:25:9-52
-39-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:25:19-49
-40        <activity android:name="com.fussy.trueman.ProgressActivity" />
-40-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:26:9-54
-40-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:26:19-51
-41        <activity android:name="com.fussy.trueman.ParentalControlActivity" />
-41-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:27:9-61
-41-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:27:19-58
-42        <activity
-42-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:29:9-30:72
-43            android:name="com.fussy.trueman.BlockActivity"
-43-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:29:19-48
-44            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-44-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:30:13-69
-45
-46        <service
-46-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:32:9-42:19
-47            android:name="com.fussy.trueman.BrowserAccessibilityService"
-47-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:33:13-56
-48            android:exported="true"
-48-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:35:13-36
-49            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
-49-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:34:13-79
-50            <intent-filter>
-50-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:36:13-38:29
-51                <action android:name="android.accessibilityservice.AccessibilityService" />
-51-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:37:17-92
-51-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:37:25-89
-52            </intent-filter>
-53
-54            <meta-data
-54-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:39:13-41:72
-55                android:name="android.accessibilityservice"
-55-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:40:17-60
-56                android:resource="@xml/accessibility_service_config" />
-56-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:41:17-69
-57        </service>
-58
-59        <receiver
-59-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:44:9-54:20
-60            android:name="com.fussy.trueman.TrueManDeviceAdminReceiver"
-60-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:45:13-55
-61            android:exported="true"
-61-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:47:13-36
-62            android:permission="android.permission.BIND_DEVICE_ADMIN" >
-62-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:46:13-70
-63            <meta-data
-63-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:48:13-50:65
-64                android:name="android.app.device_admin"
-64-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:49:17-56
-65                android:resource="@xml/device_admin_policies" />
-65-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:50:17-62
-66
-67            <intent-filter>
-67-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:51:13-53:29
-68                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
-68-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:52:17-82
-68-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:52:25-79
-69            </intent-filter>
-70        </receiver>
-71
-72        <service
-72-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:56:9-63:19
-73            android:name="com.fussy.trueman.TrueManVpnService"
-73-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:57:13-46
-74            android:exported="true"
-74-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:59:13-36
-75            android:permission="android.permission.BIND_VPN_SERVICE" >
-75-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:58:13-69
-76            <intent-filter>
-76-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:60:13-62:29
-77                <action android:name="android.net.VpnService" />
-77-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:61:17-65
-77-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:61:25-62
-78            </intent-filter>
-79        </service>
-80        <service
-80-->[androidx.room:room-runtime:2.6.1] /home/fussy/.gradle/caches/transforms-3/e622ef917c5812d995d33a2ba5d79c1e/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
-81            android:name="androidx.room.MultiInstanceInvalidationService"
-81-->[androidx.room:room-runtime:2.6.1] /home/fussy/.gradle/caches/transforms-3/e622ef917c5812d995d33a2ba5d79c1e/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
-82            android:directBootAware="true"
-82-->[androidx.room:room-runtime:2.6.1] /home/fussy/.gradle/caches/transforms-3/e622ef917c5812d995d33a2ba5d79c1e/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
-83            android:exported="false" />
-83-->[androidx.room:room-runtime:2.6.1] /home/fussy/.gradle/caches/transforms-3/e622ef917c5812d995d33a2ba5d79c1e/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
-84
-85        <provider
-85-->[androidx.emoji2:emoji2:1.2.0] /home/fussy/.gradle/caches/transforms-3/0f0c478ae3801544d21da65048166e43/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-86            android:name="androidx.startup.InitializationProvider"
-86-->[androidx.emoji2:emoji2:1.2.0] /home/fussy/.gradle/caches/transforms-3/0f0c478ae3801544d21da65048166e43/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
-87            android:authorities="com.fussy.trueman.androidx-startup"
-87-->[androidx.emoji2:emoji2:1.2.0] /home/fussy/.gradle/caches/transforms-3/0f0c478ae3801544d21da65048166e43/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
-88            android:exported="false" >
-88-->[androidx.emoji2:emoji2:1.2.0] /home/fussy/.gradle/caches/transforms-3/0f0c478ae3801544d21da65048166e43/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
-89            <meta-data
-89-->[androidx.emoji2:emoji2:1.2.0] /home/fussy/.gradle/caches/transforms-3/0f0c478ae3801544d21da65048166e43/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-90                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-90-->[androidx.emoji2:emoji2:1.2.0] /home/fussy/.gradle/caches/transforms-3/0f0c478ae3801544d21da65048166e43/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
-91                android:value="androidx.startup" />
-91-->[androidx.emoji2:emoji2:1.2.0] /home/fussy/.gradle/caches/transforms-3/0f0c478ae3801544d21da65048166e43/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
-92            <meta-data
-92-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/fussy/.gradle/caches/transforms-3/dcb519222d1b051d94c3e473122ac399/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
-93                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-93-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/fussy/.gradle/caches/transforms-3/dcb519222d1b051d94c3e473122ac399/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
-94                android:value="androidx.startup" />
-94-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/fussy/.gradle/caches/transforms-3/dcb519222d1b051d94c3e473122ac399/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
-95            <meta-data
-95-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-96                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-96-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-97                android:value="androidx.startup" />
-97-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-98        </provider>
-99
-100        <receiver
-100-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-101            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-101-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-102            android:directBootAware="false"
-102-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-103            android:enabled="true"
-103-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-104            android:exported="true"
-104-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-105            android:permission="android.permission.DUMP" >
-105-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-106            <intent-filter>
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-107                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-108            </intent-filter>
-109            <intent-filter>
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-110                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-111            </intent-filter>
-112            <intent-filter>
-112-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-113                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-114            </intent-filter>
-115            <intent-filter>
-115-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-116                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-116-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-116-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-117            </intent-filter>
-118        </receiver>
-119    </application>
-120
-121</manifest>
+12    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+12-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:6:5-81
+12-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:6:22-78
+13
+14    <permission
+14-->[androidx.core:core:1.9.0] /home/fussy/.gradle/caches/transforms-3/2c572bfdb425e6c1375d05070450f3cb/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+15        android:name="com.fussy.trueman.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.9.0] /home/fussy/.gradle/caches/transforms-3/2c572bfdb425e6c1375d05070450f3cb/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.9.0] /home/fussy/.gradle/caches/transforms-3/2c572bfdb425e6c1375d05070450f3cb/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.fussy.trueman.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.9.0] /home/fussy/.gradle/caches/transforms-3/2c572bfdb425e6c1375d05070450f3cb/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.9.0] /home/fussy/.gradle/caches/transforms-3/2c572bfdb425e6c1375d05070450f3cb/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:8:5-75:19
+21        android:allowBackup="true"
+21-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:9:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.9.0] /home/fussy/.gradle/caches/transforms-3/2c572bfdb425e6c1375d05070450f3cb/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:icon="@mipmap/ic_launcher"
+25-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:10:9-43
+26        android:label="@string/app_name"
+26-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:11:9-41
+27        android:roundIcon="@mipmap/ic_launcher_round"
+27-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:12:9-54
+28        android:supportsRtl="true"
+28-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:13:9-35
+29        android:theme="@style/Theme.TrueMan" >
+29-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:14:9-45
+30        <activity
+30-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:16:9-23:20
+31            android:name="com.fussy.trueman.SplashActivity"
+31-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:17:13-43
+32            android:exported="true" >
+32-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:18:13-36
+33            <intent-filter>
+33-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:19:13-22:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:20:17-69
+34-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:20:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:21:17-77
+36-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:21:27-74
+37            </intent-filter>
+38        </activity>
+39        <activity android:name="com.fussy.trueman.MainActivity" />
+39-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:25:9-50
+39-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:25:19-47
+40        <activity android:name="com.fussy.trueman.LessonActivity" />
+40-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:26:9-52
+40-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:26:19-49
+41        <activity android:name="com.fussy.trueman.ProgressActivity" />
+41-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:27:9-54
+41-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:27:19-51
+42        <activity android:name="com.fussy.trueman.ParentalControlActivity" />
+42-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:28:9-61
+42-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:28:19-58
+43        <activity
+43-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:30:9-31:72
+44            android:name="com.fussy.trueman.BlockActivity"
+44-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:30:19-48
+45            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+45-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:31:13-69
+46
+47        <service
+47-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:33:9-43:19
+48            android:name="com.fussy.trueman.BrowserAccessibilityService"
+48-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:34:13-56
+49            android:exported="true"
+49-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:36:13-36
+50            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+50-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:35:13-79
+51            <intent-filter>
+51-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:37:13-39:29
+52                <action android:name="android.accessibilityservice.AccessibilityService" />
+52-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:38:17-92
+52-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:38:25-89
+53            </intent-filter>
+54
+55            <meta-data
+55-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:40:13-42:72
+56                android:name="android.accessibilityservice"
+56-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:41:17-60
+57                android:resource="@xml/accessibility_service_config" />
+57-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:42:17-69
+58        </service>
+59
+60        <receiver
+60-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:45:9-55:20
+61            android:name="com.fussy.trueman.TrueManDeviceAdminReceiver"
+61-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:46:13-55
+62            android:exported="true"
+62-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:48:13-36
+63            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+63-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:47:13-70
+64            <meta-data
+64-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:49:13-51:65
+65                android:name="android.app.device_admin"
+65-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:50:17-56
+66                android:resource="@xml/device_admin_policies" />
+66-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:51:17-62
+67
+68            <intent-filter>
+68-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:52:13-54:29
+69                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+69-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:53:17-82
+69-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:53:25-79
+70            </intent-filter>
+71        </receiver>
+72
+73        <service
+73-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:57:9-64:19
+74            android:name="com.fussy.trueman.TrueManVpnService"
+74-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:58:13-46
+75            android:exported="true"
+75-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:60:13-36
+76            android:permission="android.permission.BIND_VPN_SERVICE" >
+76-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:59:13-69
+77            <intent-filter>
+77-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:61:13-63:29
+78                <action android:name="android.net.VpnService" />
+78-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:62:17-65
+78-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:62:25-62
+79            </intent-filter>
+80        </service>
+81
+82        <receiver
+82-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:66:9-73:20
+83            android:name="com.fussy.trueman.BootReceiver"
+83-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:67:13-41
+84            android:enabled="true"
+84-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:68:13-35
+85            android:exported="true" >
+85-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:69:13-36
+86            <intent-filter>
+86-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:70:13-72:29
+87                <action android:name="android.intent.action.BOOT_COMPLETED" />
+87-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:71:17-79
+87-->/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/AndroidManifest.xml:71:25-76
+88            </intent-filter>
+89        </receiver>
+90
+91        <service
+91-->[androidx.room:room-runtime:2.6.1] /home/fussy/.gradle/caches/transforms-3/e622ef917c5812d995d33a2ba5d79c1e/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+92            android:name="androidx.room.MultiInstanceInvalidationService"
+92-->[androidx.room:room-runtime:2.6.1] /home/fussy/.gradle/caches/transforms-3/e622ef917c5812d995d33a2ba5d79c1e/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+93            android:directBootAware="true"
+93-->[androidx.room:room-runtime:2.6.1] /home/fussy/.gradle/caches/transforms-3/e622ef917c5812d995d33a2ba5d79c1e/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+94            android:exported="false" />
+94-->[androidx.room:room-runtime:2.6.1] /home/fussy/.gradle/caches/transforms-3/e622ef917c5812d995d33a2ba5d79c1e/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+95
+96        <provider
+96-->[androidx.emoji2:emoji2:1.2.0] /home/fussy/.gradle/caches/transforms-3/0f0c478ae3801544d21da65048166e43/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+97            android:name="androidx.startup.InitializationProvider"
+97-->[androidx.emoji2:emoji2:1.2.0] /home/fussy/.gradle/caches/transforms-3/0f0c478ae3801544d21da65048166e43/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+98            android:authorities="com.fussy.trueman.androidx-startup"
+98-->[androidx.emoji2:emoji2:1.2.0] /home/fussy/.gradle/caches/transforms-3/0f0c478ae3801544d21da65048166e43/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+99            android:exported="false" >
+99-->[androidx.emoji2:emoji2:1.2.0] /home/fussy/.gradle/caches/transforms-3/0f0c478ae3801544d21da65048166e43/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+100            <meta-data
+100-->[androidx.emoji2:emoji2:1.2.0] /home/fussy/.gradle/caches/transforms-3/0f0c478ae3801544d21da65048166e43/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+101                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+101-->[androidx.emoji2:emoji2:1.2.0] /home/fussy/.gradle/caches/transforms-3/0f0c478ae3801544d21da65048166e43/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+102                android:value="androidx.startup" />
+102-->[androidx.emoji2:emoji2:1.2.0] /home/fussy/.gradle/caches/transforms-3/0f0c478ae3801544d21da65048166e43/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+103            <meta-data
+103-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/fussy/.gradle/caches/transforms-3/dcb519222d1b051d94c3e473122ac399/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+104                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+104-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/fussy/.gradle/caches/transforms-3/dcb519222d1b051d94c3e473122ac399/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+105                android:value="androidx.startup" />
+105-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/fussy/.gradle/caches/transforms-3/dcb519222d1b051d94c3e473122ac399/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+106            <meta-data
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+107                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+108                android:value="androidx.startup" />
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+109        </provider>
+110
+111        <receiver
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+112            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+113            android:directBootAware="false"
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+114            android:enabled="true"
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+115            android:exported="true"
+115-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+116            android:permission="android.permission.DUMP" >
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+117            <intent-filter>
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+118                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+118-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+118-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+119            </intent-filter>
+120            <intent-filter>
+120-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+121                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+122            </intent-filter>
+123            <intent-filter>
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+124                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+125            </intent-filter>
+126            <intent-filter>
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+127                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/fussy/.gradle/caches/transforms-3/1cdb85cdca350f6724ef84561e5752f4/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+128            </intent-filter>
+129        </receiver>
+130    </application>
+131
+132</manifest>

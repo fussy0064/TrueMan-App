@@ -29,9 +29,26 @@ public class BrowserAccessibilityService extends AccessibilityService {
         if (rootNode == null)
             return;
 
+        String packageName = event.getPackageName().toString();
+
+        // BLOCK OTHER VPN APPS INSTANTLY
+        String lowerPkg = packageName.toLowerCase();
+        if ((lowerPkg.contains("vpn") || lowerPkg.contains("proxy") ||
+                lowerPkg.contains("tunnel") || lowerPkg.contains("nord") ||
+                lowerPkg.contains("express")) && !packageName.equals(getPackageName())) {
+
+            Log.d("TrueMan", "Blocked VPN App from opening: " + packageName);
+            performGlobalAction(GLOBAL_ACTION_HOME);
+
+            Intent intent = new Intent(this, BlockActivity.class);
+            intent.putExtra("blocked_url", "Unauthorized VPN / Proxy App");
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return;
+        }
+
         // Try to find the URL bar
         String urlBarId = "";
-        String packageName = event.getPackageName().toString();
 
         if (packageName.equals("com.android.chrome")) {
             urlBarId = "com.android.chrome:id/url_bar";
