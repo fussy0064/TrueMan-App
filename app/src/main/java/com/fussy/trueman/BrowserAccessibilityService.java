@@ -77,6 +77,22 @@ public class BrowserAccessibilityService extends AccessibilityService {
             findAndSkipYouTubeAds(rootNode);
         }
 
+        // ADULT CONTENT DEEP SCAN (Fallback if URL bar ID is missing)
+        // This scans all text visible on the screen for forbidden words
+        String[] defaultAdultWords = { "porn", "sex", "xxx", "adult", "naked", "video tube", "redtube", "xvideos",
+                "pornhub" };
+        for (String word : defaultAdultWords) {
+            if (scanForTextMatch(rootNode, word)) {
+                Log.d("TrueMan", "Blocked Content detected via Deep Scan: " + word);
+                performGlobalAction(GLOBAL_ACTION_HOME);
+                Intent intent = new Intent(this, BlockActivity.class);
+                intent.putExtra("blocked_url", "Inappropriate Content Detected");
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return;
+            }
+        }
+
         // Try to find the URL bar
         String urlBarId = "";
 
@@ -91,6 +107,13 @@ public class BrowserAccessibilityService extends AccessibilityService {
         } else if (packageName.equals("com.microsoft.emmx")) {
             urlBarId = "com.microsoft.emmx:id/url_bar";
         } else {
+            // Even if not a known browser, check the URL manually added by parents
+            for (String word : blockedSites) {
+                if (!word.isEmpty() && scanForTextMatch(rootNode, word)) {
+                    performGlobalAction(GLOBAL_ACTION_HOME);
+                    return;
+                }
+            }
             return;
         }
 
@@ -99,19 +122,12 @@ public class BrowserAccessibilityService extends AccessibilityService {
             AccessibilityNodeInfo urlNode = urlBars.get(0);
             if (urlNode.getText() != null) {
                 String capturedUrl = urlNode.getText().toString();
-                // Check if blocked
-                // Update blockedSites if needed (ideally via BroadcastReceiver, but this works
-                // for basic setup)
-                blockedSites = dbHelper.getAllBlockedDomains();
 
+                // Check against manual block list
                 for (String word : blockedSites) {
-                    if (capturedUrl.toLowerCase().contains(word.toLowerCase())) {
+                    if (!word.isEmpty() && capturedUrl.toLowerCase().contains(word.toLowerCase())) {
                         Log.d("TrueMan", "Blocked URL accessed: " + capturedUrl);
-
-                        // Action 1: Navigate Back (or home)
                         performGlobalAction(GLOBAL_ACTION_HOME);
-
-                        // Action 2: Show Blocked screen overlay
                         Intent intent = new Intent(this, BlockActivity.class);
                         intent.putExtra("blocked_url", capturedUrl);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -121,6 +137,17 @@ public class BrowserAccessibilityService extends AccessibilityService {
                 }
             }
         }
+    }
+
+    private boolean scanForTextMatch(AccessibilityNodeInfo node, String text) {
+        if (node == null || text == null)
+            return false;
+
+        List<AccessibilityNodeInfo> matches = node.findAccessibilityNodeInfosByText(text);
+        if (matches != null && !matches.isEmpty()) {
+            return true;
+        }
+        return false;
     }
 
     private void findAndSkipYouTubeAds(AccessibilityNodeInfo node) {
