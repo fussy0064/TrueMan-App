@@ -40,10 +40,13 @@ public class TrueManVpnService extends VpnService {
                 Builder builder = new Builder();
                 builder.setSession("TrueMan Security VPN");
 
-                // CRITICAL FIX: To remove the "!" mark, we MUST NOT set DNS or route 0.0.0.0
-                // We only route a private local address used by the VPN itself.
+                // CRITICAL FIX: To remove the "!" mark, we ONLY route a private local address.
                 builder.addAddress("10.255.255.1", 32);
                 builder.addRoute("10.255.255.1", 32);
+
+                // Re-enable AdGuard DNS for Global Ad & Tracker Blocking
+                builder.addDnsServer("94.140.14.14");
+                builder.addDnsServer("94.140.15.15");
 
                 // Keep the slot locked but don't touch ANY external traffic
                 builder.allowBypass();

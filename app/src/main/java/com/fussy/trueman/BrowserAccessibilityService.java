@@ -178,8 +178,15 @@ public class BrowserAccessibilityService extends AccessibilityService {
         }
 
         // Search for nodes with "Skip" text in various languages (English, etc.)
-        searchAndClickText(node, "Skip Ad");
-        searchAndClickText(node, "Skip");
+        if (searchAndClickText(node, "Skip Ad"))
+            return;
+        if (searchAndClickText(node, "Skip"))
+            return;
+
+        // CRITICAL: Recursively search children if not found at this level
+        for (int i = 0; i < node.getChildCount(); i++) {
+            findAndSkipYouTubeAds(node.getChild(i));
+        }
     }
 
     private boolean searchAndClickText(AccessibilityNodeInfo node, String text) {
