@@ -28,46 +28,49 @@ public class TrueManVpnService extends VpnService {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        // Run as Foreground Service to prevent auto-turn-off
         startForeground(1, getNotification());
 
-        if (vpnThread != null) {
-            vpnThread.interrupt();
+        if (vpnThread == null || !vpnThread.isAlive()) {
+            vpnThread = new Thread(() -> {
+                try {
+                    Builder builder = new Builder();
+                    builder.setSession("TrueMan Locking System");
+
+                    // Route ONLY local dummy address to lock VPN slot WITHOUT showing "!" mark
+                    builder.addAddress("10.0.0.1", 32);
+                    builder.addRoute("10.0.0.1", 32);
+
+                    // allowBypass critical for connectivity
+                    builder.allowBypass();
+
+                    vpnInterface = builder.establish();
+                    Log.i("TrueManVpnService", "TrueMan Lockdown Established.");
+
+                    while (true) {
+                        Thread.sleep(10000);
+                    }
+                } catch (Exception e) {
+                    Log.e("TrueManVpnService", "VPN Thread crashed", e);
+                } finally {
+                    stopVPN();
+                }
+            });
+            vpnThread.start();
         }
 
-        vpnThread = new Thread(() -> {
-            try {
-                Builder builder = new Builder();
-                builder.setSession("TrueMan Security VPN");
-
-                // CRITICAL FIX: To remove the "!" mark, we ONLY route a private local address.
-                builder.addAddress("10.255.255.1", 32);
-                builder.addRoute("10.255.255.1", 32);
-
-                // Re-enable AdGuard DNS for Global Ad & Tracker Blocking
-                builder.addDnsServer("94.140.14.14");
-                builder.addDnsServer("94.140.15.15");
-
-                // Keep the slot locked but don't touch ANY external traffic
-                builder.allowBypass();
-
-                // Establish the VPN connection
-                vpnInterface = builder.establish();
-                Log.i("TrueManVpnService", "VPN Established. Slot Locked. ! mark fixed.");
-
-                while (!Thread.interrupted()) {
-                    Thread.sleep(5000);
-                }
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                stopVPN();
-            }
-        });
-
-        vpnThread.start();
         return START_STICKY;
+    }
+
+    @Override
+    public void onTaskRemoved(Intent rootIntent) {
+        // Restart self if swiped away
+        Intent intent = new Intent(this, TrueManVpnService.class);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent);
+        } else {
+            startService(intent);
+        }
+        super.onTaskRemoved(rootIntent);
     }
 
     private void stopVPN() {
@@ -108,9 +111,13 @@ public class TrueManVpnService extends VpnService {
 
     @Override
     public void onDestroy() {
-        if (vpnThread != null) {
+        // Send broadcast to restart self or manually trigger startup
+        Intent broadcastIntent = new Intent();
+        broadcastIntent.setAction("com.fussy.trueman.RESTART_SERVICE");
+        sendBroadcast(broadcastIntent);
+
+        if (vpnThread != null)
             vpnThread.interrupt();
-        }
         stopVPN();
         super.onDestroy();
     }

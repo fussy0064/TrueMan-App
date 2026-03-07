@@ -22,114 +22,191 @@ public class BrowserAccessibilityService extends AccessibilityService {
 
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
-        if (event == null || event.getPackageName() == null)
+        if (event == null)
             return;
 
         AccessibilityNodeInfo rootNode = getRootInActiveWindow();
         if (rootNode == null)
             return;
 
-        String packageName = event.getPackageName().toString();
-
-        // Refresh blocked sites manually added by parents
-        blockedSites = dbHelper.getAllBlockedDomains();
-
-        // BLOCK OTHER VPN APPS INSTANTLY AND TRIGGER UNINSTALL
-        String lowerPkg = packageName.toLowerCase();
-        boolean isVpnApp = lowerPkg.contains("vpn") || lowerPkg.contains("proxy") ||
-                lowerPkg.contains("tunnel") || lowerPkg.contains("nord") ||
-                lowerPkg.contains("express");
-
-        boolean isManuallyBlockedApp = false;
-        for (String word : blockedSites) {
-            if (!word.isEmpty() && lowerPkg.contains(word.toLowerCase())) {
-                isManuallyBlockedApp = true;
-                break;
-            }
+        String packageName = "";
+        if (event.getPackageName() != null) {
+            packageName = event.getPackageName().toString();
         }
 
-        if ((isVpnApp || isManuallyBlockedApp) && !packageName.equals(getPackageName())) {
+        // 🛡️ ANTI-DISABLE LOCK: Prevent user from turning off TrueMan in Settings
+        if (packageName.equals("com.android.settings")) {
+            preventServiceDisabling(rootNode);
+        }
 
-            Log.d("TrueMan", "Blocked App from opening: " + packageName);
+        // 🛡️ ADULT CONTENT RADAR (Enhanced Deep Scan)
+        String[] adultKeywords = {
+                "porn", "xxx", "sex", "tube", "naked", "video tube", "redtube", "pornhub", "xvideos", "adult", "erotic",
+                "nude"
+        };
+
+        if (deepScanForForbiddenKeywords(rootNode, adultKeywords)) {
+            Log.d("TrueMan", "Hyper-Scan found adult content!");
             performGlobalAction(GLOBAL_ACTION_HOME);
-
-            if (isVpnApp) {
-                // Force user to uninstall the unauthorized VPN!
-                try {
-                    Intent uninstallIntent = new Intent(Intent.ACTION_DELETE,
-                            android.net.Uri.parse("package:" + packageName));
-                    uninstallIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(uninstallIntent);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
+            // BlockActivity overlay
             Intent intent = new Intent(this, BlockActivity.class);
-            intent.putExtra("blocked_url", "Unauthorized Application Blocked\n(" + packageName + ")");
+            intent.putExtra("blocked_url", "Safe Browsing violation detected.");
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return;
         }
 
-        // YouTube Ad Skipping Logic
-        if (packageName.equals("com.google.android.youtube")) {
-            findAndSkipYouTubeAds(rootNode);
-        }
+        // 🛡️ BLOCK VPN/PROXY APPS
+        String lowerPkg = packageName.toLowerCase();
+        if ((lowerPkg.contains("vpn") || lowerPkg.contains("proxy") || lowerPkg.contains("tunnel"))
+                && !packageName.equals(getPackageName())) {
 
-        // ADULT CONTENT DEEP SCAN (Fallback if URL bar ID is missing)
-        // This scans all text visible on the screen for forbidden words
-        String[] defaultAdultWords = { "porn", "sex", "xxx", "adult", "naked", "video tube", "redtube", "xvideos",
-                "pornhub" };
-        for (String word : defaultAdultWords) {
-            if (scanForTextMatch(rootNode, word)) {
-                Log.d("TrueMan", "Blocked Content detected via Deep Scan: " + word);
-                performGlobalAction(GLOBAL_ACTION_HOME);
-                Intent intent = new Intent(this, BlockActivity.class);
-                intent.putExtra("blocked_url", "Inappropriate Content Detected");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                return;
-            }
-        }
-
-        // Try to find the URL bar
-        String urlBarId = "";
-
-        if (packageName.equals("com.android.chrome")) {
-            urlBarId = "com.android.chrome:id/url_bar";
-        } else if (packageName.equals("org.mozilla.firefox")) {
-            urlBarId = "org.mozilla.firefox:id/mozac_browser_toolbar_url_view";
-        } else if (packageName.equals("com.sec.android.app.sbrowser")) {
-            urlBarId = "com.sec.android.app.sbrowser:id/location_bar_edit_text";
-        } else if (packageName.equals("com.opera.browser")) {
-            urlBarId = "com.opera.browser:id/url_field";
-        } else if (packageName.equals("com.microsoft.emmx")) {
-            urlBarId = "com.microsoft.emmx:id/url_bar";
-        } else {
-            // Even if not a known browser, check the URL manually added by parents
-            for (String word : blockedSites) {
-                if (!word.isEmpty() && scanForTextMatch(rootNode, word)) {
-                    performGlobalAction(GLOBAL_ACTION_HOME);
-                    return;
-                }
+            Log.d("TrueMan", "Blocked prohibited app: " + packageName);
+            performGlobalAction(GLOBAL_ACTION_HOME);
+            // Trigger uninstall
+            try {
+                Intent uninstallIntent = new Intent(Intent.ACTION_DELETE,
+                        android.net.Uri.parse("package:" + packageName));
+                uninstallIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(uninstallIntent);
+            } catch (Exception ignored) {
             }
             return;
         }
 
-        List<AccessibilityNodeInfo> urlBars = rootNode.findAccessibilityNodeInfosByViewId(urlBarId);
-        if (urlBars != null && !urlBars.isEmpty()) {
-            AccessibilityNodeInfo urlNode = urlBars.get(0);
-            if (urlNode.getText() != null) {
-                String capturedUrl = urlNode.getText().toString();
+        // 🚀 YOUTUBE AD SKIPPER (Ultra-Aggressive)
+        if (packageName.equals("com.google.android.youtube")) {
+            aggressiveYouTubeAdSkipper(rootNode);
+        }
 
-                // Check against manual block list
-                for (String word : blockedSites) {
-                    if (!word.isEmpty() && capturedUrl.toLowerCase().contains(word.toLowerCase())) {
-                        Log.d("TrueMan", "Blocked URL accessed: " + capturedUrl);
+        // 🛡️ BROWSER URL BLOCKING
+        scanBrowserUrl(rootNode, packageName);
+    }
+
+    private void preventServiceDisabling(AccessibilityNodeInfo node) {
+        if (node == null)
+            return;
+        List<AccessibilityNodeInfo> targets = node.findAccessibilityNodeInfosByText("TrueMan");
+        if (targets != null && !targets.isEmpty()) {
+            // Find "OFF" or "Deactivate" text or buttons
+            List<AccessibilityNodeInfo> offButtons = node.findAccessibilityNodeInfosByText("OFF");
+            List<AccessibilityNodeInfo> deButtons = node.findAccessibilityNodeInfosByText("Deactivate");
+            if (!offButtons.isEmpty() || !deButtons.isEmpty()) {
+                performGlobalAction(GLOBAL_ACTION_BACK);
+                Log.d("TrueMan", "Anti-Disable triggered!");
+            }
+        }
+    }
+
+    private boolean deepScanForForbiddenKeywords(AccessibilityNodeInfo node, String[] keywords) {
+        if (node == null)
+            return false;
+
+        // Scan text
+        if (node.getText() != null) {
+            String lowerText = node.getText().toString().toLowerCase();
+            for (String kw : keywords)
+                if (lowerText.contains(kw))
+                    return true;
+        }
+
+        // Scan content description
+        if (node.getContentDescription() != null) {
+            String lowerDesc = node.getContentDescription().toString().toLowerCase();
+            for (String kw : keywords)
+                if (lowerDesc.contains(kw))
+                    return true;
+        }
+
+        // Parent block list refresh (once per event ideally, but here for safety)
+        if (dbHelper == null)
+            dbHelper = new DatabaseHelper(this);
+        List<String> userBlocked = dbHelper.getAllBlockedDomains();
+        if (node.getText() != null) {
+            String t = node.getText().toString().toLowerCase();
+            for (String b : userBlocked)
+                if (!b.isEmpty() && t.contains(b.toLowerCase()))
+                    return true;
+        }
+
+        for (int i = 0; i < node.getChildCount(); i++) {
+            if (deepScanForForbiddenKeywords(node.getChild(i), keywords))
+                return true;
+        }
+        return false;
+    }
+
+    private void aggressiveYouTubeAdSkipper(AccessibilityNodeInfo node) {
+        if (node == null)
+            return;
+
+        // Try to click any node that has "skip" in its resource name
+        String[] ids = { "skip_ad_button", "modern_skip_ad_button", "ad_skip_button", "skip_ad_button_text" };
+        for (String id : ids) {
+            List<AccessibilityNodeInfo> targets = node
+                    .findAccessibilityNodeInfosByViewId("com.google.android.youtube:id/" + id);
+            if (targets != null && !targets.isEmpty()) {
+                for (AccessibilityNodeInfo t : targets) {
+                    if (t.isClickable() && t.isEnabled()) {
+                        t.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+                        Log.d("TrueMan", "YouTube Ad Auto-Skipped!");
+                        return;
+                    }
+                }
+            }
+        }
+
+        // Text match fallback
+        List<AccessibilityNodeInfo> skipTexts = node.findAccessibilityNodeInfosByText("Skip");
+        if (skipTexts != null && !skipTexts.isEmpty()) {
+            for (AccessibilityNodeInfo st : skipTexts) {
+                AccessibilityNodeInfo clickable = findFirstClickable(st);
+                if (clickable != null && clickable.isEnabled()) {
+                    clickable.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+                    Log.d("TrueMan", "YouTube Ad Skipped via text.");
+                    return;
+                }
+            }
+        }
+
+        for (int i = 0; i < node.getChildCount(); i++) {
+            aggressiveYouTubeAdSkipper(node.getChild(i));
+        }
+    }
+
+    private AccessibilityNodeInfo findFirstClickable(AccessibilityNodeInfo node) {
+        if (node == null)
+            return null;
+        if (node.isClickable())
+            return node;
+        return findFirstClickable(node.getParent());
+    }
+
+    private void scanBrowserUrl(AccessibilityNodeInfo rootNode, String packageName) {
+        String urlBarId = "";
+        if (packageName.equals("com.android.chrome"))
+            urlBarId = "com.android.chrome:id/url_bar";
+        else if (packageName.equals("org.mozilla.firefox"))
+            urlBarId = "org.mozilla.firefox:id/mozac_browser_toolbar_url_view";
+        else if (packageName.equals("com.sec.android.app.sbrowser"))
+            urlBarId = "com.sec.android.app.sbrowser:id/location_bar_edit_text";
+        else if (packageName.equals("com.opera.browser"))
+            urlBarId = "com.opera.browser:id/url_field";
+        else if (packageName.equals("com.microsoft.emmx"))
+            urlBarId = "com.microsoft.emmx:id/url_bar";
+        else
+            return;
+
+        List<AccessibilityNodeInfo> urlNodes = rootNode.findAccessibilityNodeInfosByViewId(urlBarId);
+        if (urlNodes != null && !urlNodes.isEmpty()) {
+            AccessibilityNodeInfo urlNode = urlNodes.get(0);
+            if (urlNode.getText() != null) {
+                String url = urlNode.getText().toString().toLowerCase();
+                for (String word : dbHelper.getAllBlockedDomains()) {
+                    if (!word.isEmpty() && url.contains(word.toLowerCase())) {
                         performGlobalAction(GLOBAL_ACTION_HOME);
                         Intent intent = new Intent(this, BlockActivity.class);
-                        intent.putExtra("blocked_url", capturedUrl);
+                        intent.putExtra("blocked_url", url);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                         break;
@@ -137,79 +214,6 @@ public class BrowserAccessibilityService extends AccessibilityService {
                 }
             }
         }
-    }
-
-    private boolean scanForTextMatch(AccessibilityNodeInfo node, String text) {
-        if (node == null || text == null)
-            return false;
-
-        List<AccessibilityNodeInfo> matches = node.findAccessibilityNodeInfosByText(text);
-        if (matches != null && !matches.isEmpty()) {
-            return true;
-        }
-        return false;
-    }
-
-    private void findAndSkipYouTubeAds(AccessibilityNodeInfo node) {
-        if (node == null)
-            return;
-
-        // More aggressive list of YouTube skip button IDs
-        String[] skipButtonIds = {
-                "com.google.android.youtube:id/skip_ad_button",
-                "com.google.android.youtube:id/modern_skip_ad_button",
-                "com.google.android.youtube:id/skip_ad_button_container",
-                "com.google.android.youtube:id/ad_skip_button",
-                "com.google.android.youtube:id/skip_ad_button_text",
-                "com.google.android.youtube:id/action_button"
-        };
-
-        for (String id : skipButtonIds) {
-            List<AccessibilityNodeInfo> targets = node.findAccessibilityNodeInfosByViewId(id);
-            if (targets != null && !targets.isEmpty()) {
-                for (AccessibilityNodeInfo target : targets) {
-                    if (target.isClickable() && target.isEnabled()) {
-                        target.performAction(AccessibilityNodeInfo.ACTION_CLICK);
-                        Log.d("TrueMan", "YouTube Ad Skipped via ID: " + id);
-                        return;
-                    }
-                }
-            }
-        }
-
-        // Search for nodes with "Skip" text in various languages (English, etc.)
-        if (searchAndClickText(node, "Skip Ad"))
-            return;
-        if (searchAndClickText(node, "Skip"))
-            return;
-
-        // CRITICAL: Recursively search children if not found at this level
-        for (int i = 0; i < node.getChildCount(); i++) {
-            findAndSkipYouTubeAds(node.getChild(i));
-        }
-    }
-
-    private boolean searchAndClickText(AccessibilityNodeInfo node, String text) {
-        List<AccessibilityNodeInfo> targets = node.findAccessibilityNodeInfosByText(text);
-        if (targets != null && !targets.isEmpty()) {
-            for (AccessibilityNodeInfo target : targets) {
-                AccessibilityNodeInfo clickableNode = findClickableParent(target);
-                if (clickableNode != null && clickableNode.isEnabled()) {
-                    clickableNode.performAction(AccessibilityNodeInfo.ACTION_CLICK);
-                    Log.d("TrueMan", "YouTube Ad Skipped via text: " + text);
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    private AccessibilityNodeInfo findClickableParent(AccessibilityNodeInfo node) {
-        if (node == null)
-            return null;
-        if (node.isClickable())
-            return node;
-        return findClickableParent(node.getParent());
     }
 
     @Override
