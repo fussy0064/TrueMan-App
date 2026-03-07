@@ -22,6 +22,16 @@
                             endColumn="77"
                             endOffset="1655"/>
                     </map>
+                    <map id="android.intent.action.DELETE (used to start an activity)">
+                        <location id="0"
+                            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BrowserAccessibilityService.java"
+                            line="59"
+                            column="46"
+                            startOffset="2050"
+                            endLine="60"
+                            endColumn="77"
+                            endOffset="2159"/>
+                    </map>
                     <map id="android.app.action.ADD_DEVICE_ADMIN (used to start an activity)">
                         <location id="0"
                             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/ParentalControlActivity.java"

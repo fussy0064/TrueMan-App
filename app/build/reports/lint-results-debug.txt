@@ -1,10 +1,13 @@
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserAccessibilityService.java:35: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserAccessibilityService.java:38: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
         String lowerPkg = packageName.toLowerCase();
                                       ~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserAccessibilityService.java:78: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserAccessibilityService.java:45: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+            if (!word.isEmpty() && lowerPkg.contains(word.toLowerCase())) {
+                                                          ~~~~~~~~~~~
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserAccessibilityService.java:103: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
                     if (capturedUrl.toLowerCase().contains(word.toLowerCase())) {
                                     ~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserAccessibilityService.java:78: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserAccessibilityService.java:103: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
                     if (capturedUrl.toLowerCase().contains(word.toLowerCase())) {
                                                                 ~~~~~~~~~~~
 
@@ -364,4 +367,4 @@ public class SplashActivity extends AppCompatActivity {
    There are quickfixes to automatically extract this hardcoded string into a
    resource lookup.
 
-0 errors, 71 warnings
+0 errors, 72 warnings

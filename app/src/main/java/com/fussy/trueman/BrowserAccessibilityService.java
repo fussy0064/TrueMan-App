@@ -31,17 +31,42 @@ public class BrowserAccessibilityService extends AccessibilityService {
 
         String packageName = event.getPackageName().toString();
 
-        // BLOCK OTHER VPN APPS INSTANTLY
-        String lowerPkg = packageName.toLowerCase();
-        if ((lowerPkg.contains("vpn") || lowerPkg.contains("proxy") ||
-                lowerPkg.contains("tunnel") || lowerPkg.contains("nord") ||
-                lowerPkg.contains("express")) && !packageName.equals(getPackageName())) {
+        // Refresh blocked sites manually added by parents
+        blockedSites = dbHelper.getAllBlockedDomains();
 
-            Log.d("TrueMan", "Blocked VPN App from opening: " + packageName);
+        // BLOCK OTHER VPN APPS INSTANTLY AND TRIGGER UNINSTALL
+        String lowerPkg = packageName.toLowerCase();
+        boolean isVpnApp = lowerPkg.contains("vpn") || lowerPkg.contains("proxy") ||
+                lowerPkg.contains("tunnel") || lowerPkg.contains("nord") ||
+                lowerPkg.contains("express");
+
+        boolean isManuallyBlockedApp = false;
+        for (String word : blockedSites) {
+            if (!word.isEmpty() && lowerPkg.contains(word.toLowerCase())) {
+                isManuallyBlockedApp = true;
+                break;
+            }
+        }
+
+        if ((isVpnApp || isManuallyBlockedApp) && !packageName.equals(getPackageName())) {
+
+            Log.d("TrueMan", "Blocked App from opening: " + packageName);
             performGlobalAction(GLOBAL_ACTION_HOME);
 
+            if (isVpnApp) {
+                // Force user to uninstall the unauthorized VPN!
+                try {
+                    Intent uninstallIntent = new Intent(Intent.ACTION_DELETE,
+                            android.net.Uri.parse("package:" + packageName));
+                    uninstallIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(uninstallIntent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
             Intent intent = new Intent(this, BlockActivity.class);
-            intent.putExtra("blocked_url", "Unauthorized VPN / Proxy App");
+            intent.putExtra("blocked_url", "Unauthorized Application Blocked\n(" + packageName + ")");
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return;

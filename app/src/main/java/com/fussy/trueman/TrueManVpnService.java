@@ -22,25 +22,23 @@ public class TrueManVpnService extends VpnService {
             try {
                 Builder builder = new Builder();
 
-                // Configure the VPN to route all traffic and enforce Safe DNS
-                builder.setSession("TrueMan Safe VPN");
+                // Configure the dummy VPN securely
+                builder.setSession("TrueMan Dummy VPN");
 
-                // Only attach the VPN to TrueMan itself, leaving the rest of the phone's
-                // network completely untouched. This removes the "!" (no internet) mark.
-                // The global Android VPN slot is still occupied, successfully blocking other
-                // VPN apps.
-                builder.addAllowedApplication(getPackageName());
+                // Route an unroutable testing subnet so Android considers the VPN active
+                // but no real user traffic gets intercepted or blocked by our VPN thread.
+                // This removes the "!" mark because Android does not route 0.0.0.0 (the
+                // internet).
+                builder.addAddress("10.0.0.2", 32);
+                builder.addRoute("192.0.2.0", 24);
 
                 // Allow other apps to bypass this VPN, ensuring normal Wi-Fi/Cellular works
                 // 100%
                 builder.allowBypass();
 
-                // Add a dummy IPv4 address for the VPN interface
-                builder.addAddress("10.0.0.2", 24);
-
                 // Establish the VPN connection
                 vpnInterface = builder.establish();
-                Log.i("TrueManVpnService", "Safe Dummy VPN Established. VPN Slot Locked.");
+                Log.i("TrueManVpnService", "Safe Dummy VPN Established. VPN Slot Locked. Internet untouched.");
 
                 // Keep the thread alive while the VPN is running
                 while (!Thread.interrupted()) {
