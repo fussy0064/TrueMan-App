@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.0" type="incidents">
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;ACCESS DENIED&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_block.xml"
+            line="13"
+            column="9"
+            startOffset="430"
+            endLine="13"
+            endColumn="37"
+            endOffset="458"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;You tried to access a blocked site&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_block.xml"
+            line="23"
+            column="9"
+            startOffset="757"
+            endLine="23"
+            endColumn="58"
+            endOffset="806"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Return Home&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_block.xml"
+            line="33"
+            column="9"
+            startOffset="1110"
+            endLine="33"
+            endColumn="35"
+            endOffset="1136"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_browser.xml"
+            line="14"
+            column="10"
+            startOffset="456"
+            endLine="14"
+            endColumn="18"
+            endOffset="464"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Enter URL...&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_browser.xml"
+            line="19"
+            column="13"
+            startOffset="639"
+            endLine="19"
+            endColumn="40"
+            endOffset="666"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Go&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_browser.xml"
+            line="26"
+            column="13"
+            startOffset="872"
+            endLine="26"
+            endColumn="30"
+            endOffset="889"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Lesson Title&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_lesson.xml"
+            line="12"
+            column="9"
+            startOffset="408"
+            endLine="12"
+            endColumn="36"
+            endOffset="435"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Lesson Content here...&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_lesson.xml"
+            line="22"
+            column="9"
+            startOffset="726"
+            endLine="22"
+            endColumn="46"
+            endOffset="763"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Mark as Completed&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_lesson.xml"
+            line="29"
+            column="9"
+            startOffset="943"
+            endLine="29"
+            endColumn="41"
+            endOffset="975"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Dashboard&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="16"
+            column="13"
+            startOffset="532"
+            endLine="16"
+            endColumn="37"
+            endOffset="556"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Daily Lessons&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="25"
+            column="13"
+            startOffset="839"
+            endLine="25"
+            endColumn="41"
+            endOffset="867"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;My Progress&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="32"
+            column="13"
+            startOffset="1078"
+            endLine="32"
+            endColumn="39"
+            endOffset="1104"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Safe Browser&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="39"
+            column="13"
+            startOffset="1314"
+            endLine="39"
+            endColumn="40"
+            endOffset="1341"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Parental Control&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="46"
+            column="13"
+            startOffset="1552"
+            endLine="46"
+            endColumn="44"
+            endOffset="1583"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Parental Controls&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
+            line="11"
+            column="9"
+            startOffset="368"
+            endLine="11"
+            endColumn="41"
+            endOffset="400"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Add Domain to Block List&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
+            line="19"
+            column="9"
+            startOffset="624"
+            endLine="19"
+            endColumn="48"
+            endOffset="663"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
+            line="23"
+            column="6"
+            startOffset="747"
+            endLine="23"
+            endColumn="14"
+            endOffset="755"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
+            line="23"
+            column="6"
+            startOffset="747"
+            endLine="23"
+            endColumn="14"
+            endOffset="755"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;e.g. badsite.com&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
+            line="27"
+            column="9"
+            startOffset="893"
+            endLine="27"
+            endColumn="40"
+            endOffset="924"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Block Domain&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
+            line="34"
+            column="9"
+            startOffset="1114"
+            endLine="34"
+            endColumn="36"
+            endOffset="1141"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Global Safe Browsing&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
+            line="40"
+            column="9"
+            startOffset="1300"
+            endLine="40"
+            endColumn="44"
+            endOffset="1335"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Enable Global Blocking&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
+            line="48"
+            column="9"
+            startOffset="1564"
+            endLine="48"
+            endColumn="46"
+            endOffset="1601"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;My Progress&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_progress.xml"
+            line="11"
+            column="9"
+            startOffset="368"
+            endLine="11"
+            endColumn="35"
+            endOffset="394"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Lessons Completed: 0&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_progress.xml"
+            line="20"
+            column="9"
+            startOffset="663"
+            endLine="20"
+            endColumn="44"
+            endOffset="698"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Total Lessons: 0&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_progress.xml"
+            line="28"
+            column="9"
+            startOffset="930"
+            endLine="28"
+            endColumn="40"
+            endOffset="961"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;TrueMan&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="12"
+            column="9"
+            startOffset="403"
+            endLine="12"
+            endColumn="31"
+            endOffset="425"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Learn and Browse Safely&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="20"
+            column="9"
+            startOffset="642"
+            endLine="20"
+            endColumn="47"
+            endOffset="680"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BlockActivity.java"
+            line="21"
+            column="34"
+            startOffset="657"
+            endLine="21"
+            endColumn="84"
+            endOffset="707"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BlockActivity.java"
+            line="21"
+            column="34"
+            startOffset="657"
+            endLine="21"
+            endColumn="71"
+            endOffset="694"/>
+    </incident>
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BrowserAccessibilityService.java"
+            line="61"
+            column="37"
+            startOffset="2378"
+            endLine="61"
+            endColumn="48"
+            endOffset="2389"/>
+    </incident>
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BrowserAccessibilityService.java"
+            line="61"
+            column="65"
+            startOffset="2406"
+            endLine="61"
+            endColumn="76"
+            endOffset="2417"/>
+    </incident>
+
+    <incident
+        id="SetJavaScriptEnabled"
+        severity="warning"
+        message="Using `setJavaScriptEnabled` can introduce XSS vulnerabilities into your application, review carefully">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BrowserActivity.java"
+            line="34"
+            column="9"
+            startOffset="937"
+            endLine="34"
+            endColumn="57"
+            endOffset="985"/>
+    </incident>
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BrowserActivity.java"
+            line="55"
+            column="25"
+            startOffset="1711"
+            endLine="55"
+            endColumn="36"
+            endOffset="1722"/>
+    </incident>
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BrowserActivity.java"
+            line="55"
+            column="53"
+            startOffset="1739"
+            endLine="55"
+            endColumn="64"
+            endOffset="1750"/>
+    </incident>
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BrowserActivity.java"
+            line="67"
+            column="25"
+            startOffset="2235"
+            endLine="67"
+            endColumn="36"
+            endOffset="2246"/>
+    </incident>
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BrowserActivity.java"
+            line="67"
+            column="53"
+            startOffset="2263"
+            endLine="67"
+            endColumn="64"
+            endOffset="2274"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/LessonActivity.java"
+            line="51"
+            column="29"
+            startOffset="1830"
+            endLine="51"
+            endColumn="45"
+            endOffset="1846"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/LessonActivity.java"
+            line="52"
+            column="31"
+            startOffset="1879"
+            endLine="52"
+            endColumn="91"
+            endOffset="1939"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/ProgressActivity.java"
+            line="46"
+            column="29"
+            startOffset="1441"
+            endLine="46"
+            endColumn="62"
+            endOffset="1474"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/ProgressActivity.java"
+            line="46"
+            column="29"
+            startOffset="1441"
+            endLine="46"
+            endColumn="50"
+            endOffset="1462"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/ProgressActivity.java"
+            line="47"
+            column="25"
+            startOffset="1501"
+            endLine="47"
+            endColumn="50"
+            endOffset="1526"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/ProgressActivity.java"
+            line="47"
+            column="25"
+            startOffset="1501"
+            endLine="47"
+            endColumn="42"
+            endOffset="1518"/>
+    </incident>
+
+    <incident
+        id="OldTargetApi"
+        severity="warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.">
+        <fix-replace
+            description="Update targetSdkVersion to 35"
+            oldString="34"
+            replacement="35"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="12"
+            column="9"
+            startOffset="197"
+            endLine="12"
+            endColumn="21"
+            endOffset="209"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1">
+        <fix-replace
+            description="Change to 1.7.1"
+            family="Update versions"
+            oldString="1.6.1"
+            replacement="1.7.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="30"
+            column="20"
+            startOffset="620"
+            endLine="30"
+            endColumn="56"
+            endOffset="656"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.material:material than 1.11.0 is available: 1.13.0">
+        <fix-replace
+            description="Change to 1.13.0"
+            family="Update versions"
+            oldString="1.11.0"
+            replacement="1.13.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="31"
+            column="20"
+            startOffset="676"
+            endLine="31"
+            endColumn="65"
+            endOffset="721"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1">
+        <fix-replace
+            description="Change to 2.2.1"
+            family="Update versions"
+            oldString="2.1.4"
+            replacement="2.2.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="32"
+            column="20"
+            startOffset="741"
+            endLine="32"
+            endColumn="70"
+            endOffset="791"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-runtime than 2.6.1 is available: 2.8.4">
+        <fix-replace
+            description="Change to 2.8.4"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.8.4"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="35"
+            column="20"
+            startOffset="839"
+            endLine="35"
+            endColumn="54"
+            endOffset="873"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-compiler than 2.6.1 is available: 2.8.4">
+        <fix-replace
+            description="Change to 2.8.4"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.8.4"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="36"
+            column="25"
+            startOffset="898"
+            endLine="36"
+            endColumn="60"
+            endOffset="933"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel than 2.6.2 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.6.2"
+            replacement="2.10.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="39"
+            column="20"
+            startOffset="982"
+            endLine="39"
+            endColumn="66"
+            endOffset="1028"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-livedata than 2.6.2 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.6.2"
+            replacement="2.10.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="40"
+            column="20"
+            startOffset="1048"
+            endLine="40"
+            endColumn="65"
+            endOffset="1093"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icon used as round icon did not have a circular shape">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/ic_launcher_round.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icon used as round icon did not have a circular shape">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xxhdpi/ic_launcher_round.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xxhdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icon used as round icon did not have a circular shape">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xhdpi/ic_launcher_round.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xhdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icon used as round icon did not have a circular shape">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-mdpi/ic_launcher_round.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-mdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icon used as round icon did not have a circular shape">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher_round.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xxhdpi/ic_launcher_round.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xxhdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/ic_launcher_round.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher_round.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-mdpi/ic_launcher_round.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-mdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xhdpi/ic_launcher_round.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xhdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `#D32F2F` with a theme that also paints a background (inferred theme is `@style/Theme_AppCompat_Light_NoActionBar`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_block.xml"
+            line="8"
+            column="5"
+            startOffset="288"
+            endLine="8"
+            endColumn="33"
+            endOffset="316"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `#1E88E5` with a theme that also paints a background (inferred theme is `@style/Theme.TrueMan`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="7"
+            column="5"
+            startOffset="261"
+            endLine="7"
+            endColumn="33"
+            endOffset="289"/>
+    </incident>
+
+</incidents>

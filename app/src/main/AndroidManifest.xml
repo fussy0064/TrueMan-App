@@ -26,9 +26,7 @@
         <activity android:name=".ProgressActivity" />
         <activity android:name=".BrowserActivity" />
         <activity android:name=".ParentalControlActivity" />
-        <activity android:name=".ItStudiesActivity" />
-        <activity android:name=".ExerciseActivity" />
-        <activity android:name=".NutritionActivity" />
+
         <activity android:name=".BlockActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 

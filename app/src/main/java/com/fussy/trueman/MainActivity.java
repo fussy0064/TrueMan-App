@@ -24,12 +24,5 @@ public class MainActivity extends AppCompatActivity {
         btnParental
                 .setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ParentalControlActivity.class)));
 
-        Button btnItStudies = findViewById(R.id.btnItStudies);
-        Button btnExercise = findViewById(R.id.btnExercise);
-        Button btnNutrition = findViewById(R.id.btnNutrition);
-
-        btnItStudies.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ItStudiesActivity.class)));
-        btnExercise.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ExerciseActivity.class)));
-        btnNutrition.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, NutritionActivity.class)));
     }
 }

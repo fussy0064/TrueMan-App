@@ -40,9 +40,6 @@
         <activity android:name="com.fussy.trueman.ProgressActivity" />
         <activity android:name="com.fussy.trueman.BrowserActivity" />
         <activity android:name="com.fussy.trueman.ParentalControlActivity" />
-        <activity android:name="com.fussy.trueman.ItStudiesActivity" />
-        <activity android:name="com.fussy.trueman.ExerciseActivity" />
-        <activity android:name="com.fussy.trueman.NutritionActivity" />
         <activity
             android:name="com.fussy.trueman.BlockActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

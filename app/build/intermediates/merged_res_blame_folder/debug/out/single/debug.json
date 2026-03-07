@@ -8,10 +8,6 @@
         "source": "com.fussy.trueman.app-main-36:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.fussy.trueman.app-merged_res-34:/layout_activity_nutrition.xml.flat",
-        "source": "com.fussy.trueman.app-main-36:/layout/activity_nutrition.xml"
-    },
-    {
         "merged": "com.fussy.trueman.app-merged_res-34:/layout_activity_browser.xml.flat",
         "source": "com.fussy.trueman.app-main-36:/layout/activity_browser.xml"
     },
@@ -26,10 +22,6 @@
     {
         "merged": "com.fussy.trueman.app-merged_res-34:/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "com.fussy.trueman.app-main-36:/mipmap-xhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "com.fussy.trueman.app-merged_res-34:/layout_activity_exercise.xml.flat",
-        "source": "com.fussy.trueman.app-main-36:/layout/activity_exercise.xml"
     },
     {
         "merged": "com.fussy.trueman.app-merged_res-34:/layout_activity_progress.xml.flat",
@@ -78,9 +70,5 @@
     {
         "merged": "com.fussy.trueman.app-merged_res-34:/mipmap-hdpi_ic_launcher.png.flat",
         "source": "com.fussy.trueman.app-main-36:/mipmap-hdpi/ic_launcher.png"
-    },
-    {
-        "merged": "com.fussy.trueman.app-merged_res-34:/layout_activity_it_studies.xml.flat",
-        "source": "com.fussy.trueman.app-main-36:/layout/activity_it_studies.xml"
     }
 ]

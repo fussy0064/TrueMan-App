@@ -12,7 +12,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "TrueMan.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     // Table Names
     private static final String TABLE_LESSONS = "lessons";
@@ -58,7 +58,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_BLOCKED_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_BLOCKED_DOMAIN + " TEXT)";
         db.execSQL(createBlockedTable);
-        
+
         // Insert sample initial data
         insertInitialData(db);
     }
@@ -74,19 +74,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         lesson2.put(COLUMN_LESSON_TITLE, "Online Safety");
         lesson2.put(COLUMN_LESSON_CONTENT, "Never share your personal information. Ensure safe browsing habits.");
         db.insert(TABLE_LESSONS, null, lesson2);
-        
+
         // Initial blocked domains
         ContentValues domain1 = new ContentValues();
         domain1.put(COLUMN_BLOCKED_DOMAIN, "porn");
         db.insert(TABLE_BLOCKED_WEBSITES, null, domain1);
-        
+
         ContentValues domain2 = new ContentValues();
         domain2.put(COLUMN_BLOCKED_DOMAIN, "xxx");
         db.insert(TABLE_BLOCKED_WEBSITES, null, domain2);
-        
+
         ContentValues domain3 = new ContentValues();
         domain3.put(COLUMN_BLOCKED_DOMAIN, "adult");
         db.insert(TABLE_BLOCKED_WEBSITES, null, domain3);
+
+        ContentValues domain4 = new ContentValues();
+        domain4.put(COLUMN_BLOCKED_DOMAIN, "redtube");
+        db.insert(TABLE_BLOCKED_WEBSITES, null, domain4);
+
+        ContentValues domain5 = new ContentValues();
+        domain5.put(COLUMN_BLOCKED_DOMAIN, "pornhub");
+        db.insert(TABLE_BLOCKED_WEBSITES, null, domain5);
+
+        ContentValues domain6 = new ContentValues();
+        domain6.put(COLUMN_BLOCKED_DOMAIN, "xvideos");
+        db.insert(TABLE_BLOCKED_WEBSITES, null, domain6);
     }
 
     @Override
