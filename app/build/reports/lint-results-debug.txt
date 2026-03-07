@@ -4,18 +4,6 @@
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserAccessibilityService.java:61: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
                     if (capturedUrl.toLowerCase().contains(word.toLowerCase())) {
                                                                 ~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserActivity.java:55: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
-                if (url.toLowerCase().contains(word.toLowerCase())) {
-                        ~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserActivity.java:55: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
-                if (url.toLowerCase().contains(word.toLowerCase())) {
-                                                    ~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserActivity.java:67: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
-                if (url.toLowerCase().contains(word.toLowerCase())) {
-                        ~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserActivity.java:67: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
-                if (url.toLowerCase().contains(word.toLowerCase())) {
-                                                    ~~~~~~~~~~~
 
    Explanation for issues of type "DefaultLocale":
    Calling String#toLowerCase() or #toUpperCase() without specifying an
@@ -95,17 +83,6 @@ public class SplashActivity extends AppCompatActivity {
    are cases where you deliberately want to stick with an older version.
    However, you may simply not be aware that a more recent version is
    available, and that is what this lint check helps find.
-
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserActivity.java:34: Warning: Using setJavaScriptEnabled can introduce XSS vulnerabilities into your application, review carefully [SetJavaScriptEnabled]
-        webView.getSettings().setJavaScriptEnabled(true);
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-   Explanation for issues of type "SetJavaScriptEnabled":
-   Your code should not invoke setJavaScriptEnabled if you are not sure that
-   your app really requires JavaScript support.
-
-   https://goo.gle/SetJavaScriptEnabled
-   https://developer.android.com/training/articles/security-tips
 
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/values/themes.xml:9: Warning: Unnecessary; SDK_INT is always >= 21 [ObsoleteSdkInt]
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
@@ -200,6 +177,9 @@ public class SplashActivity extends AppCompatActivity {
    sometimes point to icons that were accidentally overwritten or accidentally
    not updated.
 
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml:33: Warning: This text field does not specify an inputType [TextFields]
+    <EditText
+     ~~~~~~~~
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_parental_control.xml:23: Warning: This text field does not specify an inputType [TextFields]
     <EditText
      ~~~~~~~~
@@ -217,9 +197,12 @@ public class SplashActivity extends AppCompatActivity {
    If you really want to keep the text field generic, you can suppress this
    warning by setting inputType="text".
 
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_browser.xml:14: Warning: Missing autofillHints attribute [Autofill]
-        <EditText
-         ~~~~~~~~
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml:33: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml:40: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_parental_control.xml:23: Warning: Missing autofillHints attribute [Autofill]
     <EditText
      ~~~~~~~~
@@ -250,10 +233,10 @@ public class SplashActivity extends AppCompatActivity {
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BlockActivity.java:21: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
             tvBlockedUrl.setText("Site URL contains restricted word: " + blockedUrl);
                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/LessonActivity.java:51: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/LessonActivity.java:63: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
             tvTitle.setText("All caught up!");
                             ~~~~~~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/LessonActivity.java:52: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/LessonActivity.java:64: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
             tvContent.setText("You have completed all available lessons. Come back later!");
                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/ProgressActivity.java:46: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
@@ -291,19 +274,22 @@ public class SplashActivity extends AppCompatActivity {
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_block.xml:33: Warning: Hardcoded string "Return Home", should use @string resource [HardcodedText]
         android:text="Return Home"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_browser.xml:19: Warning: Hardcoded string "Enter URL...", should use @string resource [HardcodedText]
-            android:hint="Enter URL..."
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_browser.xml:26: Warning: Hardcoded string "Go", should use @string resource [HardcodedText]
-            android:text="Go"
-            ~~~~~~~~~~~~~~~~~
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml:12: Warning: Hardcoded string "Lesson Title", should use @string resource [HardcodedText]
         android:text="Lesson Title"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml:22: Warning: Hardcoded string "Lesson Content here...", should use @string resource [HardcodedText]
         android:text="Lesson Content here..."
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml:29: Warning: Hardcoded string "Mark as Completed", should use @string resource [HardcodedText]
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml:29: Warning: Hardcoded string "Set your daily goal based on this lesson:", should use @string resource [HardcodedText]
+        android:text="Set your daily goal based on this lesson:"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml:37: Warning: Hardcoded string "My Goal...", should use @string resource [HardcodedText]
+        android:hint="My Goal..."
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml:44: Warning: Hardcoded string "Secure Goal with Password", should use @string resource [HardcodedText]
+        android:hint="Secure Goal with Password"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml:52: Warning: Hardcoded string "Mark as Completed", should use @string resource [HardcodedText]
         android:text="Mark as Completed"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_main.xml:16: Warning: Hardcoded string "Dashboard", should use @string resource [HardcodedText]
@@ -315,10 +301,7 @@ public class SplashActivity extends AppCompatActivity {
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_main.xml:32: Warning: Hardcoded string "My Progress", should use @string resource [HardcodedText]
             android:text="My Progress"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_main.xml:39: Warning: Hardcoded string "Safe Browser", should use @string resource [HardcodedText]
-            android:text="Safe Browser"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_main.xml:46: Warning: Hardcoded string "Parental Control", should use @string resource [HardcodedText]
+/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_main.xml:40: Warning: Hardcoded string "Parental Control", should use @string resource [HardcodedText]
             android:text="Parental Control"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_parental_control.xml:11: Warning: Hardcoded string "Parental Controls", should use @string resource [HardcodedText]
@@ -369,4 +352,4 @@ public class SplashActivity extends AppCompatActivity {
    There are quickfixes to automatically extract this hardcoded string into a
    resource lookup.
 
-0 errors, 70 warnings
+0 errors, 67 warnings

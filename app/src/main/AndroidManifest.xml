@@ -24,7 +24,6 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".LessonActivity" />
         <activity android:name=".ProgressActivity" />
-        <activity android:name=".BrowserActivity" />
         <activity android:name=".ParentalControlActivity" />
 
         <activity android:name=".BlockActivity"

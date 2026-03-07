@@ -44,62 +44,6 @@
     </incident>
 
     <incident
-        id="Autofill"
-        severity="warning"
-        message="Missing `autofillHints` attribute">
-        <fix-alternatives>
-            <fix-attribute
-                description="Set autofillHints"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="autofillHints"
-                value=""
-                dot="0"
-                mark="0"/>
-            <fix-attribute
-                description="Set importantForAutofill=&quot;no&quot;"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="importantForAutofill"
-                value="no"/>
-        </fix-alternatives>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_browser.xml"
-            line="14"
-            column="10"
-            startOffset="456"
-            endLine="14"
-            endColumn="18"
-            endOffset="464"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Enter URL...&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_browser.xml"
-            line="19"
-            column="13"
-            startOffset="639"
-            endLine="19"
-            endColumn="40"
-            endOffset="666"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Go&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_browser.xml"
-            line="26"
-            column="13"
-            startOffset="872"
-            endLine="26"
-            endColumn="30"
-            endOffset="889"/>
-    </incident>
-
-    <incident
         id="HardcodedText"
         severity="warning"
         message="Hardcoded string &quot;Lesson Title&quot;, should use `@string` resource">
@@ -130,15 +74,134 @@
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Mark as Completed&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Set your daily goal based on this lesson:&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_lesson.xml"
             line="29"
             column="9"
-            startOffset="943"
+            startOffset="955"
             endLine="29"
+            endColumn="65"
+            endOffset="1011"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_lesson.xml"
+            line="33"
+            column="6"
+            startOffset="1086"
+            endLine="33"
+            endColumn="14"
+            endOffset="1094"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_lesson.xml"
+            line="33"
+            column="6"
+            startOffset="1086"
+            endLine="33"
+            endColumn="14"
+            endOffset="1094"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;My Goal...&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_lesson.xml"
+            line="37"
+            column="9"
+            startOffset="1225"
+            endLine="37"
+            endColumn="34"
+            endOffset="1250"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_lesson.xml"
+            line="40"
+            column="6"
+            startOffset="1302"
+            endLine="40"
+            endColumn="14"
+            endOffset="1310"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Secure Goal with Password&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_lesson.xml"
+            line="44"
+            column="9"
+            startOffset="1445"
+            endLine="44"
+            endColumn="49"
+            endOffset="1485"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Mark as Completed&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_lesson.xml"
+            line="52"
+            column="9"
+            startOffset="1717"
+            endLine="52"
             endColumn="41"
-            endOffset="975"/>
+            endOffset="1749"/>
     </incident>
 
     <incident
@@ -186,29 +249,15 @@
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Safe Browser&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="39"
-            column="13"
-            startOffset="1314"
-            endLine="39"
-            endColumn="40"
-            endOffset="1341"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
         message="Hardcoded string &quot;Parental Control&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="46"
+            line="40"
             column="13"
-            startOffset="1552"
-            endLine="46"
+            startOffset="1316"
+            endLine="40"
             endColumn="44"
-            endOffset="1583"/>
+            endOffset="1347"/>
     </incident>
 
     <incident
@@ -240,27 +289,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            dot="4"
-            mark="0"/>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
-            line="23"
-            column="6"
-            startOffset="747"
-            endLine="23"
-            endColumn="14"
-            endOffset="755"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -278,6 +306,27 @@
                 attribute="importantForAutofill"
                 value="no"/>
         </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
+            line="23"
+            column="6"
+            startOffset="747"
+            endLine="23"
+            endColumn="14"
+            endOffset="755"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            dot="4"
+            mark="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_parental_control.xml"
             line="23"
@@ -471,87 +520,17 @@
     </incident>
 
     <incident
-        id="SetJavaScriptEnabled"
-        severity="warning"
-        message="Using `setJavaScriptEnabled` can introduce XSS vulnerabilities into your application, review carefully">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BrowserActivity.java"
-            line="34"
-            column="9"
-            startOffset="937"
-            endLine="34"
-            endColumn="57"
-            endOffset="985"/>
-    </incident>
-
-    <incident
-        id="DefaultLocale"
-        severity="warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BrowserActivity.java"
-            line="55"
-            column="25"
-            startOffset="1711"
-            endLine="55"
-            endColumn="36"
-            endOffset="1722"/>
-    </incident>
-
-    <incident
-        id="DefaultLocale"
-        severity="warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BrowserActivity.java"
-            line="55"
-            column="53"
-            startOffset="1739"
-            endLine="55"
-            endColumn="64"
-            endOffset="1750"/>
-    </incident>
-
-    <incident
-        id="DefaultLocale"
-        severity="warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BrowserActivity.java"
-            line="67"
-            column="25"
-            startOffset="2235"
-            endLine="67"
-            endColumn="36"
-            endOffset="2246"/>
-    </incident>
-
-    <incident
-        id="DefaultLocale"
-        severity="warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/BrowserActivity.java"
-            line="67"
-            column="53"
-            startOffset="2263"
-            endLine="67"
-            endColumn="64"
-            endOffset="2274"/>
-    </incident>
-
-    <incident
         id="SetTextI18n"
         severity="warning"
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/LessonActivity.java"
-            line="51"
+            line="63"
             column="29"
-            startOffset="1830"
-            endLine="51"
+            startOffset="2372"
+            endLine="63"
             endColumn="45"
-            endOffset="1846"/>
+            endOffset="2388"/>
     </incident>
 
     <incident
@@ -560,12 +539,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/fussy/trueman/LessonActivity.java"
-            line="52"
+            line="64"
             column="31"
-            startOffset="1879"
-            endLine="52"
+            startOffset="2421"
+            endLine="64"
             endColumn="91"
-            endOffset="1939"/>
+            endOffset="2481"/>
     </incident>
 
     <incident

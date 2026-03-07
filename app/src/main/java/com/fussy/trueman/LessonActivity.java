@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,12 +27,23 @@ public class LessonActivity extends AppCompatActivity {
         TextView tvLessonContent = findViewById(R.id.tvLessonContent);
         Button btnMarkComplete = findViewById(R.id.btnMarkComplete);
 
+        EditText etGoal = findViewById(R.id.etGoal);
+        EditText etPassword = findViewById(R.id.etPassword);
+
         loadNextLesson(tvLessonTitle, tvLessonContent);
 
         btnMarkComplete.setOnClickListener(v -> {
             if (currentLessonId != -1) {
-                markLessonCompleted(currentLessonId);
-                Toast.makeText(this, "Lesson marked as complete!", Toast.LENGTH_SHORT).show();
+                String goalText = etGoal.getText().toString().trim();
+                String passText = etPassword.getText().toString().trim();
+
+                if (goalText.isEmpty() || passText.isEmpty()) {
+                    Toast.makeText(this, "Please set a goal and secure it with a password!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                markLessonCompleted(currentLessonId, goalText, passText);
+                Toast.makeText(this, "Lesson and Goal secured!", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -51,15 +63,19 @@ public class LessonActivity extends AppCompatActivity {
             tvTitle.setText("All caught up!");
             tvContent.setText("You have completed all available lessons. Come back later!");
             findViewById(R.id.btnMarkComplete).setEnabled(false);
+            findViewById(R.id.etGoal).setEnabled(false);
+            findViewById(R.id.etPassword).setEnabled(false);
         }
         cursor.close();
     }
 
-    private void markLessonCompleted(int lessonId) {
+    private void markLessonCompleted(int lessonId, String goal, String password) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("lesson_id", lessonId);
         values.put("completion_status", 1);
+        values.put("user_goal", goal);
+        values.put("goal_password", password);
         db.insert("progress", null, values);
     }
 }

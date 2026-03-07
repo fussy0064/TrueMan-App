@@ -3171,9 +3171,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btnBlockDomain
-id btnBrowser
 id btnEnableAccessibility
-id btnGo
 id btnLessons
 id btnMarkComplete
 id btnParental
@@ -3260,7 +3258,8 @@ id endToStart
 id enterAlways
 id enterAlwaysCollapsed
 id etDomainBlock
-id etUrl
+id etGoal
+id etPassword
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3574,7 +3573,6 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
-id webView
 id west
 id withText
 id with_icon
@@ -3699,7 +3697,6 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_block
-layout activity_browser
 layout activity_lesson
 layout activity_main
 layout activity_parental_control

@@ -12,7 +12,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "TrueMan.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
 
     // Table Names
     private static final String TABLE_LESSONS = "lessons";
@@ -28,6 +28,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_PROGRESS_ID = "id";
     private static final String COLUMN_PROGRESS_LESSON_ID = "lesson_id";
     private static final String COLUMN_PROGRESS_STATUS = "completion_status";
+    private static final String COLUMN_PROGRESS_GOAL = "user_goal";
+    private static final String COLUMN_PROGRESS_PASSWORD = "goal_password";
 
     // Blocked Websites Table Columns
     private static final String COLUMN_BLOCKED_ID = "id";
@@ -50,7 +52,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String createProgressTable = "CREATE TABLE " + TABLE_PROGRESS + " (" +
                 COLUMN_PROGRESS_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_PROGRESS_LESSON_ID + " INTEGER, " +
-                COLUMN_PROGRESS_STATUS + " INTEGER)";
+                COLUMN_PROGRESS_STATUS + " INTEGER, " +
+                COLUMN_PROGRESS_GOAL + " TEXT, " +
+                COLUMN_PROGRESS_PASSWORD + " TEXT)";
         db.execSQL(createProgressTable);
 
         // Create Blocked Websites Table

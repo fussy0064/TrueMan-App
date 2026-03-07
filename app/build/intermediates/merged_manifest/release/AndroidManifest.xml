@@ -37,7 +37,6 @@
         <activity android:name="com.fussy.trueman.MainActivity" />
         <activity android:name="com.fussy.trueman.LessonActivity" />
         <activity android:name="com.fussy.trueman.ProgressActivity" />
-        <activity android:name="com.fussy.trueman.BrowserActivity" />
         <activity android:name="com.fussy.trueman.ParentalControlActivity" />
         <activity
             android:name="com.fussy.trueman.BlockActivity"

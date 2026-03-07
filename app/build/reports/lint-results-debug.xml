@@ -38,78 +38,6 @@
     </issue>
 
     <issue
-        id="DefaultLocale"
-        severity="Warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
-        category="Correctness"
-        priority="6"
-        summary="Implied default locale in case conversion"
-        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
-        url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        errorLine1="                if (url.toLowerCase().contains(word.toLowerCase())) {"
-        errorLine2="                        ~~~~~~~~~~~">
-        <location
-            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserActivity.java"
-            line="55"
-            column="25"/>
-    </issue>
-
-    <issue
-        id="DefaultLocale"
-        severity="Warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
-        category="Correctness"
-        priority="6"
-        summary="Implied default locale in case conversion"
-        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
-        url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        errorLine1="                if (url.toLowerCase().contains(word.toLowerCase())) {"
-        errorLine2="                                                    ~~~~~~~~~~~">
-        <location
-            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserActivity.java"
-            line="55"
-            column="53"/>
-    </issue>
-
-    <issue
-        id="DefaultLocale"
-        severity="Warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
-        category="Correctness"
-        priority="6"
-        summary="Implied default locale in case conversion"
-        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
-        url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        errorLine1="                if (url.toLowerCase().contains(word.toLowerCase())) {"
-        errorLine2="                        ~~~~~~~~~~~">
-        <location
-            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserActivity.java"
-            line="67"
-            column="25"/>
-    </issue>
-
-    <issue
-        id="DefaultLocale"
-        severity="Warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
-        category="Correctness"
-        priority="6"
-        summary="Implied default locale in case conversion"
-        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
-        url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        errorLine1="                if (url.toLowerCase().contains(word.toLowerCase())) {"
-        errorLine2="                                                    ~~~~~~~~~~~">
-        <location
-            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserActivity.java"
-            line="67"
-            column="53"/>
-    </issue>
-
-    <issue
         id="OldTargetApi"
         severity="Warning"
         message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
@@ -255,24 +183,6 @@
             file="/home/fussy/AndroidStudioProjects/TrueMan/app/build.gradle"
             line="40"
             column="20"/>
-    </issue>
-
-    <issue
-        id="SetJavaScriptEnabled"
-        severity="Warning"
-        message="Using `setJavaScriptEnabled` can introduce XSS vulnerabilities into your application, review carefully"
-        category="Security"
-        priority="6"
-        summary="Using `setJavaScriptEnabled`"
-        explanation="Your code should not invoke `setJavaScriptEnabled` if you are not sure that your app really requires JavaScript support."
-        url="https://goo.gle/SetJavaScriptEnabled"
-        urls="https://goo.gle/SetJavaScriptEnabled,https://developer.android.com/training/articles/security-tips"
-        errorLine1="        webView.getSettings().setJavaScriptEnabled(true);"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/BrowserActivity.java"
-            line="34"
-            column="9"/>
     </issue>
 
     <issue
@@ -540,6 +450,22 @@
         errorLine1="    &lt;EditText"
         errorLine2="     ~~~~~~~~">
         <location
+            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml"
+            line="33"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="TextFields"
+        severity="Warning"
+        message="This text field does not specify an `inputType`"
+        category="Usability"
+        priority="5"
+        summary="Missing `inputType`"
+        explanation="Providing an `inputType` attribute on a text field improves usability because depending on the data to be input, optimized keyboards can be shown to the user (such as just digits and parentheses for a phone number). &#xA;&#xA;The lint detector also looks at the `id` of the view, and if the id offers a hint of the purpose of the field (for example, the `id` contains the phrase `phone` or `email`), then lint will also ensure that the `inputType` contains the corresponding type attributes.&#xA;&#xA;If you really want to keep the text field generic, you can suppress this warning by setting `inputType=&quot;text&quot;`."
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
+        <location
             file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_parental_control.xml"
             line="23"
             column="6"/>
@@ -555,12 +481,30 @@
         explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
         url="https://developer.android.com/guide/topics/text/autofill.html"
         urls="https://developer.android.com/guide/topics/text/autofill.html"
-        errorLine1="        &lt;EditText"
-        errorLine2="         ~~~~~~~~">
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
         <location
-            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_browser.xml"
-            line="14"
-            column="10"/>
+            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml"
+            line="33"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml"
+            line="40"
+            column="6"/>
     </issue>
 
     <issue
@@ -631,7 +575,7 @@
         errorLine2="                            ~~~~~~~~~~~~~~~~">
         <location
             file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/LessonActivity.java"
-            line="51"
+            line="63"
             column="29"/>
     </issue>
 
@@ -649,7 +593,7 @@
         errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/java/com/fussy/trueman/LessonActivity.java"
-            line="52"
+            line="64"
             column="31"/>
     </issue>
 
@@ -776,38 +720,6 @@
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Enter URL...&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="            android:hint=&quot;Enter URL...&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_browser.xml"
-            line="19"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Go&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="            android:text=&quot;Go&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_browser.xml"
-            line="26"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
         message="Hardcoded string &quot;Lesson Title&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
@@ -840,6 +752,54 @@
     <issue
         id="HardcodedText"
         severity="Warning"
+        message="Hardcoded string &quot;Set your daily goal based on this lesson:&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Set your daily goal based on this lesson:&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml"
+            line="29"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;My Goal...&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:hint=&quot;My Goal...&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml"
+            line="37"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Secure Goal with Password&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:hint=&quot;Secure Goal with Password&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml"
+            line="44"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
         message="Hardcoded string &quot;Mark as Completed&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
@@ -849,7 +809,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_lesson.xml"
-            line="29"
+            line="52"
             column="9"/>
     </issue>
 
@@ -904,22 +864,6 @@
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Safe Browser&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="            android:text=&quot;Safe Browser&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_main.xml"
-            line="39"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
         message="Hardcoded string &quot;Parental Control&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
@@ -929,7 +873,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/fussy/AndroidStudioProjects/TrueMan/app/src/main/res/layout/activity_main.xml"
-            line="46"
+            line="40"
             column="13"/>
     </issue>
 

@@ -177,27 +177,26 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 70 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 67 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sat Mar 07 18:17:37 EAT 2026 by AGP (8.2.0)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sat Mar 07 18:39:09 EAT 2026 by AGP (8.2.0)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Issue Types</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
-      <a class="mdl-navigation__link" href="#DefaultLocale"><i class="material-icons warning-icon">warning</i>Implied default locale in case conversion (6)</a>
+      <a class="mdl-navigation__link" href="#DefaultLocale"><i class="material-icons warning-icon">warning</i>Implied default locale in case conversion (2)</a>
       <a class="mdl-navigation__link" href="#OldTargetApi"><i class="material-icons warning-icon">warning</i>Target SDK attribute is not targeting latest version (1)</a>
       <a class="mdl-navigation__link" href="#CustomSplashScreen"><i class="material-icons warning-icon">warning</i>Application-defined Launch Screen (1)</a>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (7)</a>
-      <a class="mdl-navigation__link" href="#SetJavaScriptEnabled"><i class="material-icons warning-icon">warning</i>Using <code>setJavaScriptEnabled</code> (1)</a>
       <a class="mdl-navigation__link" href="#ObsoleteSdkInt"><i class="material-icons warning-icon">warning</i>Obsolete SDK_INT Version Check (1)</a>
       <a class="mdl-navigation__link" href="#Overdraw"><i class="material-icons warning-icon">warning</i>Overdraw: Painting regions more than once (2)</a>
       <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (1)</a>
       <a class="mdl-navigation__link" href="#IconLauncherShape"><i class="material-icons warning-icon">warning</i>The launcher icon shape should use a distinct silhouette (10)</a>
       <a class="mdl-navigation__link" href="#IconDuplicates"><i class="material-icons warning-icon">warning</i>Duplicated icons under different names (5)</a>
-      <a class="mdl-navigation__link" href="#TextFields"><i class="material-icons warning-icon">warning</i>Missing <code>inputType</code> (1)</a>
-      <a class="mdl-navigation__link" href="#Autofill"><i class="material-icons warning-icon">warning</i>Use Autofill (2)</a>
+      <a class="mdl-navigation__link" href="#TextFields"><i class="material-icons warning-icon">warning</i>Missing <code>inputType</code> (2)</a>
+      <a class="mdl-navigation__link" href="#Autofill"><i class="material-icons warning-icon">warning</i>Use Autofill (3)</a>
       <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (8)</a>
       <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (24)</a>
     </nav>
@@ -215,7 +214,7 @@ document.getElementById(id).style.display = 'none';
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
 </td></tr>
 <tr>
-<td class="countColumn">6</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#DefaultLocale">DefaultLocale</a>: Implied default locale in case conversion</td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
@@ -226,11 +225,6 @@ document.getElementById(id).style.display = 'none';
 <tr>
 <td class="countColumn">7</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
-<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Security">Security</a>
-</td></tr>
-<tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#SetJavaScriptEnabled">SetJavaScriptEnabled</a>: Using <code>setJavaScriptEnabled</code></td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
 <tr>
@@ -253,10 +247,10 @@ document.getElementById(id).style.display = 'none';
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Usability">Usability</a>
 </td></tr>
 <tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#TextFields">TextFields</a>: Missing <code>inputType</code></td></tr>
 <tr>
-<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">3</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#Autofill">Autofill</a>: Use Autofill</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
 </td></tr>
@@ -304,42 +298,6 @@ Dismiss</button>            </div>
 <span class="lineno"> 62 </span>                        Log.d(<span class="string">"TrueMan"</span>, <span class="string">"Blocked URL accessed: "</span> + capturedUrl);
 <span class="lineno"> 63 </span>
 <span class="lineno"> 64 </span>                        <span class="comment">// Action 1: Navigate Back (or home)</span></pre>
-
-<span class="location"><a href="../../src/main/java/com/fussy/trueman/BrowserActivity.java">../../src/main/java/com/fussy/trueman/BrowserActivity.java</a>:55</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
-<span class="lineno"> 52 </span>  String url = request.getUrl().toString();
-<span class="lineno"> 53 </span>
-<span class="lineno"> 54 </span>  <span class="keyword">for</span> (String word : blockedSites) {
-<span class="caretline"><span class="lineno"> 55 </span>      <span class="keyword">if</span> (url.<span class="warning">toLowerCase</span>().contains(word.toLowerCase())) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 56 </span>          Toast.makeText(getApplicationContext(),
-<span class="lineno"> 57 </span>                  <span class="string">"This website is blocked for safety reasons"</span>, Toast.LENGTH_LONG).show();
-<span class="lineno"> 58 </span>          <span class="keyword">return</span> <span class="keyword">true</span>; <span class="comment">// Cancel the load</span></pre>
-
-<span class="location"><a href="../../src/main/java/com/fussy/trueman/BrowserActivity.java">../../src/main/java/com/fussy/trueman/BrowserActivity.java</a>:55</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
-<span class="lineno"> 52 </span>  String url = request.getUrl().toString();
-<span class="lineno"> 53 </span>
-<span class="lineno"> 54 </span>  <span class="keyword">for</span> (String word : blockedSites) {
-<span class="caretline"><span class="lineno"> 55 </span>      <span class="keyword">if</span> (url.toLowerCase().contains(word.<span class="warning">toLowerCase</span>())) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 56 </span>          Toast.makeText(getApplicationContext(),
-<span class="lineno"> 57 </span>                  <span class="string">"This website is blocked for safety reasons"</span>, Toast.LENGTH_LONG).show();
-<span class="lineno"> 58 </span>          <span class="keyword">return</span> <span class="keyword">true</span>; <span class="comment">// Cancel the load</span></pre>
-
-<span class="location"><a href="../../src/main/java/com/fussy/trueman/BrowserActivity.java">../../src/main/java/com/fussy/trueman/BrowserActivity.java</a>:67</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
-<span class="lineno"> 64 </span>  <span class="annotation">@Override</span>
-<span class="lineno"> 65 </span>  <span class="keyword">public</span> <span class="keyword">boolean</span> shouldOverrideUrlLoading(WebView view, String url) {
-<span class="lineno"> 66 </span>      <span class="keyword">for</span> (String word : blockedSites) {
-<span class="caretline"><span class="lineno"> 67 </span>          <span class="keyword">if</span> (url.<span class="warning">toLowerCase</span>().contains(word.toLowerCase())) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 68 </span>              Toast.makeText(getApplicationContext(),
-<span class="lineno"> 69 </span>                      <span class="string">"This website is blocked for safety reasons"</span>, Toast.LENGTH_LONG).show();
-<span class="lineno"> 70 </span>              <span class="keyword">return</span> <span class="keyword">true</span>; <span class="comment">// Cancel the load</span></pre>
-
-<span class="location"><a href="../../src/main/java/com/fussy/trueman/BrowserActivity.java">../../src/main/java/com/fussy/trueman/BrowserActivity.java</a>:67</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
-<span class="lineno"> 64 </span>  <span class="annotation">@Override</span>
-<span class="lineno"> 65 </span>  <span class="keyword">public</span> <span class="keyword">boolean</span> shouldOverrideUrlLoading(WebView view, String url) {
-<span class="lineno"> 66 </span>      <span class="keyword">for</span> (String word : blockedSites) {
-<span class="caretline"><span class="lineno"> 67 </span>          <span class="keyword">if</span> (url.toLowerCase().contains(word.<span class="warning">toLowerCase</span>())) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 68 </span>              Toast.makeText(getApplicationContext(),
-<span class="lineno"> 69 </span>                      <span class="string">"This website is blocked for safety reasons"</span>, Toast.LENGTH_LONG).show();
-<span class="lineno"> 70 </span>              <span class="keyword">return</span> <span class="keyword">true</span>; <span class="comment">// Cancel the load</span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationDefaultLocale" style="display: none;">
@@ -565,55 +523,6 @@ To suppress this error, use the issue id "GradleDependency" as explained in the 
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationGradleDependencyLink" onclick="reveal('explanationGradleDependency');">
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="GradleDependencyCardLink" onclick="hideid('GradleDependencyCard');">
-Dismiss</button>            </div>
-            </div>
-          </section>
-<a name="Security"></a>
-<a name="SetJavaScriptEnabled"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="SetJavaScriptEnabledCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Using setJavaScriptEnabled</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/fussy/trueman/BrowserActivity.java">../../src/main/java/com/fussy/trueman/BrowserActivity.java</a>:34</span>: <span class="message">Using <code>setJavaScriptEnabled</code> can introduce XSS vulnerabilities into your application, review carefully</span><br /><pre class="errorlines">
-<span class="lineno"> 31 </span>        etUrl = findViewById(R.id.etUrl);
-<span class="lineno"> 32 </span>        Button btnGo = findViewById(R.id.btnGo);
-<span class="lineno"> 33 </span>
-<span class="caretline"><span class="lineno"> 34 </span>        <span class="warning">webView.getSettings().setJavaScriptEnabled(<span class="keyword">true</span>)</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 35 </span>        webView.setWebViewClient(<span class="keyword">new</span> SafeWebViewClient());
-<span class="lineno"> 36 </span>
-<span class="lineno"> 37 </span>        btnGo.setOnClickListener(v -> {
-</pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationSetJavaScriptEnabled" style="display: none;">
-Your code should not invoke <code>setJavaScriptEnabled</code> if you are not sure that your app really requires JavaScript support.<br/><div class="moreinfo">More info: <ul><li><a href="https://goo.gle/SetJavaScriptEnabled">https://goo.gle/SetJavaScriptEnabled</a>
-<li><a href="https://developer.android.com/training/articles/security-tips">https://developer.android.com/training/articles/security-tips</a>
-</ul></div>To suppress this error, use the issue id "SetJavaScriptEnabled" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">SetJavaScriptEnabled</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Security</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 6/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationSetJavaScriptEnabledLink" onclick="reveal('explanationSetJavaScriptEnabled');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="SetJavaScriptEnabledCardLink" onclick="hideid('SetJavaScriptEnabledCard');">
 Dismiss</button>            </div>
             </div>
           </section>
@@ -938,6 +847,15 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
+<span class="location"><a href="../../src/main/res/layout/activity_lesson.xml">../../src/main/res/layout/activity_lesson.xml</a>:33</span>: <span class="message">This text field does not specify an <code>inputType</code></span><br /><pre class="errorlines">
+<span class="lineno"> 30 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"16sp"</span>
+<span class="lineno"> 31 </span>        <span class="prefix">android:</span><span class="attribute">textStyle</span>=<span class="value">"bold"</span> />
+<span class="lineno"> 32 </span>
+<span class="caretline"><span class="lineno"> 33 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">EditText</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
+</span><span class="lineno"> 34 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/etGoal"</span>
+<span class="lineno"> 35 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 36 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
+
 <span class="location"><a href="../../src/main/res/layout/activity_parental_control.xml">../../src/main/res/layout/activity_parental_control.xml</a>:23</span>: <span class="message">This text field does not specify an <code>inputType</code></span><br /><pre class="errorlines">
 <span class="lineno"> 20 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"18sp"</span>
 <span class="lineno"> 21 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"8dp"</span> />
@@ -987,14 +905,23 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/activity_browser.xml">../../src/main/res/layout/activity_browser.xml</a>:14</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
-<span class="lineno"> 11 </span>        <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"8dp"</span>
-<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"#EEEEEE"</span>>
-<span class="lineno"> 13 </span>
-<span class="caretline"><span class="lineno"> 14 </span>        <span class="tag">&lt;</span><span class="warning"><span class="tag">EditText</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
-</span><span class="lineno"> 15 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/etUrl"</span>
-<span class="lineno"> 16 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"0dp"</span>
-<span class="lineno"> 17 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span></pre>
+<span class="location"><a href="../../src/main/res/layout/activity_lesson.xml">../../src/main/res/layout/activity_lesson.xml</a>:33</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
+<span class="lineno"> 30 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"16sp"</span>
+<span class="lineno"> 31 </span>        <span class="prefix">android:</span><span class="attribute">textStyle</span>=<span class="value">"bold"</span> />
+<span class="lineno"> 32 </span>
+<span class="caretline"><span class="lineno"> 33 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">EditText</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
+</span><span class="lineno"> 34 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/etGoal"</span>
+<span class="lineno"> 35 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 36 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_lesson.xml">../../src/main/res/layout/activity_lesson.xml</a>:40</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
+<span class="lineno"> 37 </span>        <span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"My Goal..."</span>
+<span class="lineno"> 38 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"8dp"</span> />
+<span class="lineno"> 39 </span>
+<span class="caretline"><span class="lineno"> 40 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">EditText</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
+</span><span class="lineno"> 41 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/etPassword"</span>
+<span class="lineno"> 42 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 43 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_parental_control.xml">../../src/main/res/layout/activity_parental_control.xml</a>:23</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
 <span class="lineno"> 20 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"18sp"</span>
@@ -1068,24 +995,24 @@ Dismiss</button>            </div>
 <span class="lineno"> 24 </span>        btnReturnHome.setOnClickListener(v -> finish());
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/fussy/trueman/LessonActivity.java">../../src/main/java/com/fussy/trueman/LessonActivity.java</a>:51</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 48 </span>          tvTitle.setText(cursor.getString(<span class="number">1</span>));
-<span class="lineno"> 49 </span>          tvContent.setText(cursor.getString(<span class="number">2</span>));
-<span class="lineno"> 50 </span>      } <span class="keyword">else</span> {
-<span class="caretline"><span class="lineno"> 51 </span>          tvTitle.setText(<span class="warning"><span class="string">"All caught up!"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 52 </span>          tvContent.setText(<span class="string">"You have completed all available lessons. Come back later!"</span>);
-<span class="lineno"> 53 </span>          findViewById(R.id.btnMarkComplete).setEnabled(<span class="keyword">false</span>);
-<span class="lineno"> 54 </span>      }
+<span class="location"><a href="../../src/main/java/com/fussy/trueman/LessonActivity.java">../../src/main/java/com/fussy/trueman/LessonActivity.java</a>:63</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 60 </span>          tvTitle.setText(cursor.getString(<span class="number">1</span>));
+<span class="lineno"> 61 </span>          tvContent.setText(cursor.getString(<span class="number">2</span>));
+<span class="lineno"> 62 </span>      } <span class="keyword">else</span> {
+<span class="caretline"><span class="lineno"> 63 </span>          tvTitle.setText(<span class="warning"><span class="string">"All caught up!"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 64 </span>          tvContent.setText(<span class="string">"You have completed all available lessons. Come back later!"</span>);
+<span class="lineno"> 65 </span>          findViewById(R.id.btnMarkComplete).setEnabled(<span class="keyword">false</span>);
+<span class="lineno"> 66 </span>          findViewById(R.id.etGoal).setEnabled(<span class="keyword">false</span>);
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/fussy/trueman/LessonActivity.java">../../src/main/java/com/fussy/trueman/LessonActivity.java</a>:52</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 49 </span>          tvContent.setText(cursor.getString(<span class="number">2</span>));
-<span class="lineno"> 50 </span>      } <span class="keyword">else</span> {
-<span class="lineno"> 51 </span>          tvTitle.setText(<span class="string">"All caught up!"</span>);
-<span class="caretline"><span class="lineno"> 52 </span>          tvContent.setText(<span class="warning"><span class="string">"You have completed all available lessons. Come back later!"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 53 </span>          findViewById(R.id.btnMarkComplete).setEnabled(<span class="keyword">false</span>);
-<span class="lineno"> 54 </span>      }
-<span class="lineno"> 55 </span>      cursor.close();
+<span class="location"><a href="../../src/main/java/com/fussy/trueman/LessonActivity.java">../../src/main/java/com/fussy/trueman/LessonActivity.java</a>:64</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 61 </span>          tvContent.setText(cursor.getString(<span class="number">2</span>));
+<span class="lineno"> 62 </span>      } <span class="keyword">else</span> {
+<span class="lineno"> 63 </span>          tvTitle.setText(<span class="string">"All caught up!"</span>);
+<span class="caretline"><span class="lineno"> 64 </span>          tvContent.setText(<span class="warning"><span class="string">"You have completed all available lessons. Come back later!"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 65 </span>          findViewById(R.id.btnMarkComplete).setEnabled(<span class="keyword">false</span>);
+<span class="lineno"> 66 </span>          findViewById(R.id.etGoal).setEnabled(<span class="keyword">false</span>);
+<span class="lineno"> 67 </span>          findViewById(R.id.etPassword).setEnabled(<span class="keyword">false</span>);
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/fussy/trueman/ProgressActivity.java">../../src/main/java/com/fussy/trueman/ProgressActivity.java</a>:46</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
@@ -1192,26 +1119,6 @@ Dismiss</button>            </div>
 <span class="lineno"> 35 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"#D32F2F"</span> />
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_browser.xml">../../src/main/res/layout/activity_browser.xml</a>:19</span>: <span class="message">Hardcoded string "Enter URL...", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 16 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"0dp"</span>
-<span class="lineno"> 17 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="lineno"> 18 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 19 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Enter URL..."</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 20 </span>            <span class="prefix">android:</span><span class="attribute">inputType</span>=<span class="value">"textUri"</span> />
-<span class="lineno"> 21 </span>
-<span class="lineno"> 22 </span>        <span class="tag">&lt;Button</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_browser.xml">../../src/main/res/layout/activity_browser.xml</a>:26</span>: <span class="message">Hardcoded string "Go", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 23 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/btnGo"</span>
-<span class="lineno"> 24 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 25 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 26 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Go"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 27 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginStart</span>=<span class="value">"8dp"</span> />
-<span class="lineno"> 28 </span>    <span class="tag">&lt;/LinearLayout></span>
-</pre>
-
-<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 19 More Occurrences...</button>
-<div id="HardcodedTextDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/layout/activity_lesson.xml">../../src/main/res/layout/activity_lesson.xml</a>:12</span>: <span class="message">Hardcoded string "Lesson Title", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  9 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/tvLessonTitle"</span>
 <span class="lineno"> 10 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
@@ -1227,18 +1134,47 @@ Dismiss</button>            </div>
 <span class="lineno"> 20 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"0dp"</span>
 <span class="lineno"> 21 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
 <span class="caretline"><span class="lineno"> 22 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Lesson Content here..."</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"18sp"</span> />
-<span class="lineno"> 24 </span>
-<span class="lineno"> 25 </span>    <span class="tag">&lt;Button</span></pre>
+<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"18sp"</span> 
+<span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"16dp"</span> />
+</pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_lesson.xml">../../src/main/res/layout/activity_lesson.xml</a>:29</span>: <span class="message">Hardcoded string "Mark as Completed", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 26 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/btnMarkComplete"</span>
-<span class="lineno"> 27 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno"> 28 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"60dp"</span>
-<span class="caretline"><span class="lineno"> 29 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Mark as Completed"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 30 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"24dp"</span> />
-<span class="lineno"> 31 </span>
-<span class="lineno"> 32 </span><span class="tag">&lt;/LinearLayout></span></pre>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 19 More Occurrences...</button>
+<div id="HardcodedTextDiv" style="display: none">
+<span class="location"><a href="../../src/main/res/layout/activity_lesson.xml">../../src/main/res/layout/activity_lesson.xml</a>:29</span>: <span class="message">Hardcoded string "Set your daily goal based on this lesson:", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 26 </span>    <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno"> 27 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 28 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 29 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Set your daily goal based on this lesson:"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 30 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"16sp"</span>
+<span class="lineno"> 31 </span>        <span class="prefix">android:</span><span class="attribute">textStyle</span>=<span class="value">"bold"</span> />
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_lesson.xml">../../src/main/res/layout/activity_lesson.xml</a>:37</span>: <span class="message">Hardcoded string "My Goal...", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 34 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/etGoal"</span>
+<span class="lineno"> 35 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 36 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 37 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"My Goal..."</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 38 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"8dp"</span> />
+<span class="lineno"> 39 </span>
+<span class="lineno"> 40 </span>    <span class="tag">&lt;EditText</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_lesson.xml">../../src/main/res/layout/activity_lesson.xml</a>:44</span>: <span class="message">Hardcoded string "Secure Goal with Password", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 41 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/etPassword"</span>
+<span class="lineno"> 42 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 43 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 44 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Secure Goal with Password"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 45 </span>        <span class="prefix">android:</span><span class="attribute">inputType</span>=<span class="value">"textPassword"</span>
+<span class="lineno"> 46 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"16dp"</span> />
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_lesson.xml">../../src/main/res/layout/activity_lesson.xml</a>:52</span>: <span class="message">Hardcoded string "Mark as Completed", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 49 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/btnMarkComplete"</span>
+<span class="lineno"> 50 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 51 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"60dp"</span>
+<span class="caretline"><span class="lineno"> 52 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Mark as Completed"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 53 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"24dp"</span> />
+<span class="lineno"> 54 </span>
+<span class="lineno"> 55 </span><span class="tag">&lt;/LinearLayout></span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:16</span>: <span class="message">Hardcoded string "Dashboard", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno"> 13 </span>        <span class="tag">&lt;TextView</span><span class="attribute">
@@ -1266,24 +1202,15 @@ Dismiss</button>            </div>
 <span class="caretline"><span class="lineno"> 32 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"My Progress"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno"> 33 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"16dp"</span> />
 <span class="lineno"> 34 </span>
-<span class="lineno"> 35 </span>        <span class="tag">&lt;Button</span></pre>
+</pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:39</span>: <span class="message">Hardcoded string "Safe Browser", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 36 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/btnBrowser"</span>
-<span class="lineno"> 37 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno"> 38 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"60dp"</span>
-<span class="caretline"><span class="lineno"> 39 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Safe Browser"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 40 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"16dp"</span> />
-<span class="lineno"> 41 </span>
-<span class="lineno"> 42 </span>        <span class="tag">&lt;Button</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:46</span>: <span class="message">Hardcoded string "Parental Control", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 43 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/btnParental"</span>
-<span class="lineno"> 44 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno"> 45 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"60dp"</span>
-<span class="caretline"><span class="lineno"> 46 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Parental Control"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 47 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"16dp"</span> />
-<span class="lineno"> 48 </span>
+<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:40</span>: <span class="message">Hardcoded string "Parental Control", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 37 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/btnParental"</span>
+<span class="lineno"> 38 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 39 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"60dp"</span>
+<span class="caretline"><span class="lineno"> 40 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Parental Control"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 41 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"16dp"</span> />
+<span class="lineno"> 42 </span>
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_parental_control.xml">../../src/main/res/layout/activity_parental_control.xml</a>:11</span>: <span class="message">Hardcoded string "Parental Controls", should use <code>@string</code> resource</span><br /><pre class="errorlines">

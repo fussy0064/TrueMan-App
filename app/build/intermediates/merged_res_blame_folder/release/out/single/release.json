@@ -8,10 +8,6 @@
         "source": "com.fussy.trueman.app-main-35:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.fussy.trueman.app-merged_res-34:/layout_activity_browser.xml.flat",
-        "source": "com.fussy.trueman.app-main-35:/layout/activity_browser.xml"
-    },
-    {
         "merged": "com.fussy.trueman.app-merged_res-34:/layout_activity_lesson.xml.flat",
         "source": "com.fussy.trueman.app-main-35:/layout/activity_lesson.xml"
     },
