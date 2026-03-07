@@ -32,8 +32,11 @@ public class TrueManVpnService extends VpnService {
                 // Add a dummy IPv4 address for the VPN interface
                 builder.addAddress("10.0.0.2", 24);
 
-                // Route all DNS traffic (Port 53) through the VPN to force the Safe DNS
-                builder.addRoute("0.0.0.0", 0);
+                // We DO NOT route 0.0.0.0/0 because we aren't a full packet-forwarding VPN
+                // We just route a dummy local subnet.
+                // This successfully occupies the Android VPN slot (locking out other VPNs),
+                // while letting the normal Wi-Fi / Cellular internet work perfectly.
+                builder.addRoute("10.0.0.0", 8);
 
                 // Establish the VPN connection
                 vpnInterface = builder.establish();
