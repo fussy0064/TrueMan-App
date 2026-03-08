@@ -1,4 +1,4 @@
-# Mobile Learning and Safe Browsing Application with Parental Control
+# Mobile VPN and Safe Browsing Application with Parental Control
 
 ![TrueMan App Icon](app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
 
