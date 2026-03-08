@@ -39,10 +39,25 @@ public class BrowserAccessibilityService extends AccessibilityService {
             preventServiceDisabling(rootNode);
         }
 
+        // 🛡️ SYSTEM WHITELIST: Don't block system UI or common launchers
+        if (packageName.equals("com.android.systemui") ||
+                packageName.equals("com.android.launcher") ||
+                packageName.equals("com.google.android.apps.nexuslauncher") ||
+                packageName.equals("com.ss.squarehome2") ||
+                packageName.contains("launcher")) {
+            return;
+        }
+
         // 🛡️ ADULT CONTENT RADAR (Enhanced Deep Scan)
+        if (packageName.equals("com.google.android.youtube")) {
+            aggressiveYouTubeAdSkipper(rootNode);
+            return; // Skip adult keyword scan for YouTube itself
+        }
+
         String[] adultKeywords = {
-                "porn", "xxx", "sex", "tube", "naked", "video tube", "redtube", "pornhub", "xvideos", "adult", "erotic",
-                "nude"
+                "porn", "xxx", "sex", "naked", "redtube", "pornhub", "xvideos", "erotic",
+                "nude", "horny", "slut", "milf", "blowjob", "hot video", "sexy", "booty",
+                "vagina", "penis", "fuck", "dick", "pussy"
         };
 
         if (deepScanForForbiddenKeywords(rootNode, adultKeywords)) {
@@ -59,7 +74,8 @@ public class BrowserAccessibilityService extends AccessibilityService {
         // 🛡️ BLOCK VPN/PROXY APPS
         String lowerPkg = packageName.toLowerCase();
         if ((lowerPkg.contains("vpn") || lowerPkg.contains("proxy") || lowerPkg.contains("tunnel"))
-                && !packageName.equals(getPackageName())) {
+                && !packageName.equals(getPackageName())
+                && !packageName.equals("com.android.vpndialogs")) {
 
             Log.d("TrueMan", "Blocked prohibited app: " + packageName);
             performGlobalAction(GLOBAL_ACTION_HOME);
@@ -79,8 +95,36 @@ public class BrowserAccessibilityService extends AccessibilityService {
             aggressiveYouTubeAdSkipper(rootNode);
         }
 
+        // 🛡️ GENERAL AD BLOCKER
+        // Scan for generic ad labels like "Sponsored" or "Advertisement" and try to
+        // hide them if possible
+        // Note: Full destruction of app ads needs deeper hooks, but this helps on many
+        // platforms
+        if (packageName.contains("browser") || packageName.equals("com.android.chrome")) {
+            scanForGeneralAds(rootNode);
+        }
+
         // 🛡️ BROWSER URL BLOCKING
         scanBrowserUrl(rootNode, packageName);
+    }
+
+    private void scanForGeneralAds(AccessibilityNodeInfo node) {
+        if (node == null)
+            return;
+
+        String[] adTriggers = { "Sponsored", "Advertisement", "Promoted", "Sponsorisé", "Anuncio" };
+        for (String label : adTriggers) {
+            List<AccessibilityNodeInfo> adNodes = node.findAccessibilityNodeInfosByText(label);
+            if (adNodes != null && !adNodes.isEmpty()) {
+                Log.d("TrueMan", "🚩 Ad Detected: " + label);
+                // We can't easily "remove" views, but we can log them or attempt to click close
+                // buttons nearby
+            }
+        }
+
+        for (int i = 0; i < node.getChildCount(); i++) {
+            scanForGeneralAds(node.getChild(i));
+        }
     }
 
     private void preventServiceDisabling(AccessibilityNodeInfo node) {
@@ -140,8 +184,11 @@ public class BrowserAccessibilityService extends AccessibilityService {
         if (node == null)
             return;
 
-        // Try to click any node that has "skip" in its resource name
-        String[] ids = { "skip_ad_button", "modern_skip_ad_button", "ad_skip_button", "skip_ad_button_text" };
+        // 1. FAST RESOURCE ID SKIP
+        String[] ids = {
+                "skip_ad_button", "modern_skip_ad_button", "ad_skip_button",
+                "skip_ad_button_text", "btn_skip", "skip_button"
+        };
         for (String id : ids) {
             List<AccessibilityNodeInfo> targets = node
                     .findAccessibilityNodeInfosByViewId("com.google.android.youtube:id/" + id);
@@ -149,22 +196,25 @@ public class BrowserAccessibilityService extends AccessibilityService {
                 for (AccessibilityNodeInfo t : targets) {
                     if (t.isClickable() && t.isEnabled()) {
                         t.performAction(AccessibilityNodeInfo.ACTION_CLICK);
-                        Log.d("TrueMan", "YouTube Ad Auto-Skipped!");
+                        Log.d("TrueMan", "🚀 YouTube Ad KILLED via Resource ID!");
                         return;
                     }
                 }
             }
         }
 
-        // Text match fallback
-        List<AccessibilityNodeInfo> skipTexts = node.findAccessibilityNodeInfosByText("Skip");
-        if (skipTexts != null && !skipTexts.isEmpty()) {
-            for (AccessibilityNodeInfo st : skipTexts) {
-                AccessibilityNodeInfo clickable = findFirstClickable(st);
-                if (clickable != null && clickable.isEnabled()) {
-                    clickable.performAction(AccessibilityNodeInfo.ACTION_CLICK);
-                    Log.d("TrueMan", "YouTube Ad Skipped via text.");
-                    return;
+        // 2. TEXT-BASED SKIP (Multilingual support)
+        String[] skipTextsArr = { "Skip", "Skip Ad", "Sauter", "Omitir", "Saltar" };
+        for (String text : skipTextsArr) {
+            List<AccessibilityNodeInfo> targets = node.findAccessibilityNodeInfosByText(text);
+            if (targets != null && !targets.isEmpty()) {
+                for (AccessibilityNodeInfo t : targets) {
+                    AccessibilityNodeInfo clickable = findFirstClickable(t);
+                    if (clickable != null && clickable.isEnabled()) {
+                        clickable.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+                        Log.d("TrueMan", "🚀 YouTube Ad KILLED via Text: " + text);
+                        return;
+                    }
                 }
             }
         }

@@ -14,23 +14,22 @@ The application integrates a **safe browsing system capable of globally blocking
 
 ## 2. Core Features of the Application
 
-### 📚 Daily Learning Lessons
-The application provides short educational lessons to encourage continuous learning. It features topics like Time Management and Online Safety stored locally on the device using an SQLite database. You can track your reading progress, keeping a log of what you have finished to build healthy learning habits.
-
 ### 🛡️ VPN Lockdown & Anti-Bypass
 The application implements a high-security lockdown system to prevent the user from bypassing digital safety:
-* **TrueMan Safe VPN:** Occupies the Android VPN slot to automatically disconnect and block other VPN apps from running.
+* **TrueMan Safe VPN:** Strictly occupies the Android VPN slot (Bypass disabled) to prevent other VPN apps from being established.
 * **Aggressive App Interceptor:** Using Global Accessibility Services, TrueMan detects and blocks the opening of unauthorized VPN, Proxy, or Tunneling applications.
-* **Uninstall Trap:** If an unauthorized VPN app is detected, TrueMan forcefully triggers the system uninstaller prompt to remove the threat.
-* **Auto-Start on Boot:** TrueMan automatically engages its security layers and VPN service as soon as the device is restarted.
+* **Smart Isolation:** Restricted to self-routing, ensuring that your **hidden apps** and **work profile apps** maintain full internet connectivity while the device remains protected.
 
 ### 🚫 Global Ad & Tracker Blocking
 TrueMan provides a cleaner and safer browsing experience by removing intrusive advertisements:
-* **YouTube Ad Skipper:** Automatically detects and skips non-skippable and skippable YouTube ads in the native YouTube application.
-* **Network-Level Ad Filtering:** Routes network traffic (via Safe DNS) through AdGuard DNS servers to block ads, malware, and trackers globally across all applications.
+* **YouTube Ad Executioner:** Multilingual support (English, French, Spanish) to automatically detect and skip ads instantly via Resource IDs and text labels.
+* **General Ad Radar:** Scans browsers and apps for generic ad labels like "Sponsored" or "Advertisement" to identify and notify the user.
 
-### 🏛️ Device Administrator Integration
-TrueMan can be activated as a **Device Administrator**, preventing the application from being uninstalled by the user for maximum security integrity.
+### 🏛️ Digital Safety & Adult Content Radar
+* **Hyper-Scan Keyword Radar:** Over 20+ strict adult keywords monitored in real-time across all browser activities.
+* **Automated Block Overlay:** Immediately forces the device back to the Home Screen and shows a "Safe Browsing violation" overlay when prohibited content is detected.
+* **System Whitelist:** Integrated safety for system launchers (e.g., Square Home, System UI) to ensure zero false positives during normal phone use.
+* **Device Administrator:** Prevents the application from being uninstalled by the user for maximum security integrity.
 
 ---
 

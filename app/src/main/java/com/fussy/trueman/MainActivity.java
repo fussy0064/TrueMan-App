@@ -13,12 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnLessons = findViewById(R.id.btnLessons);
-        Button btnProgress = findViewById(R.id.btnProgress);
         Button btnParental = findViewById(R.id.btnParental);
 
-        btnLessons.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, LessonActivity.class)));
-        btnProgress.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ProgressActivity.class)));
         btnParental
                 .setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ParentalControlActivity.class)));
 

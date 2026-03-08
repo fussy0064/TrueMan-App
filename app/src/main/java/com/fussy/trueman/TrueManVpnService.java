@@ -40,8 +40,11 @@ public class TrueManVpnService extends VpnService {
                     builder.addAddress("10.0.0.1", 32);
                     builder.addRoute("10.0.0.1", 32);
 
-                    // allowBypass critical for connectivity
-                    builder.allowBypass();
+                    try {
+                        builder.addAllowedApplication(getPackageName());
+                    } catch (Exception e) {
+                        Log.e("TrueManVpnService", "App not found for VPN whitelist", e);
+                    }
 
                     vpnInterface = builder.establish();
                     Log.i("TrueManVpnService", "TrueMan Lockdown Established.");
